@@ -35,9 +35,22 @@ export const DealLikes = ({ dealId, initialLikes, likedUsers }) => {
         console.error("Error:", error);
       }
     };
+
+    const handleKeyPress = (event) => {
+      // Check if the Enter key is pressed
+      if (event.key === "Enter") {
+        handleLike();
+      }
+    };
   
     return (
-      <span onClick={handleLike} className="star-section">
+      <span
+      tabIndex="0" // Make the element focusable
+      onClick={handleLike}
+      onKeyPress={handleKeyPress} // Handle key press for accessibility
+      className="star-section"
+      role="button" // Indicate that the element is interactive
+    >
         {liked ? <span className="fa fa-star checked"></span> : <span className="fa fa-star-o unchecked"></span>}
         {likes}
       </span>
