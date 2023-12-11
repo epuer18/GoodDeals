@@ -12,7 +12,6 @@ router.post("/api/login/password", async (req, res, next) => {
     try {
         if (userEmail) {
             userinfo = await myDB.getUserByEmail(userEmail);
-            // res.status(200).json({id:userId._id,email:req.user.email, name:userId.username});
         }
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -56,6 +55,23 @@ router.get("/api/getUser", async (req, res) => {
     }
 });
 
+
+router.get("/api/deals/user/:userId", async (req, res) => {
+    try {
+        const userId = req.params.userId;
+        const userDeals = await myDB.getDealsByUserId(userId);
+  
+        if (!userDeals) {
+            return res.status(404).json({ msg: "No deals found for this user." });
+        }
+  
+        res.status(200).json(userDeals);
+    } catch (error) {
+        console.error("Error fetching user's deals:", error);
+        res.status(500).json({ error: error.message });
+    }
+  });
+  
   
 router.post("/api/signup", async (req, res) => {
     try {
