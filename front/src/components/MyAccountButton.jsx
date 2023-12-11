@@ -15,8 +15,8 @@ export function MyAccountButton() {
       </button>
       {showDropdown && (
         <div className="dropdown-content">
-          <Link to="/myaccount">Created Deals</Link>
-          {/* Other menu items */}
+          {/* <Link to="/usercreated">Created Deals</Link> */}
+          <Link to="/userliked">Liked Deals</Link>
         </div>
       )}
     </div>

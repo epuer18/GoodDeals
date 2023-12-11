@@ -11,7 +11,8 @@ import { SignUpPage } from "./pages/SignUpPage";
 import { LoginLink } from './components/LoginLink';
 import { SearchBox } from './components/SearchBox';
 import { SearchPage } from './pages/SearchPage';
-import { MyAccountPage } from './pages/MyAccountPage';
+import { UserCreatedPage } from './pages/UserCreatedPage';
+import { UserLikedPage } from './pages/UserLikedPage.jsx';
 import "./asset/style/App.css";
 
 export default function App() {
@@ -65,7 +66,8 @@ export default function App() {
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/myaccount" element={<MyAccountPage />} />
+        <Route path="/usercreated" element={<UserCreatedPage />} />
+        <Route path="/userliked" element={<UserLikedPage />} />
       </Routes>
       <AppFooter />
     </div>

@@ -2,35 +2,34 @@ import React, { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../components/userContext';
 import { Link } from 'react-router-dom';
 
-export function MyAccountPage () {
-  const [userDeals, setUserDeals] = useState([]);
+export function UserLikedPage () {
+  const [likedDeals, setLikedDeals] = useState([]);
   const { user } = useContext(UserContext);
 
   useEffect(() => {
-    const fetchUserDeals = async () => {
+    const fetchLikedDeals = async () => {
       if (user) {
         try {
-          const response = await fetch(`/api/deals/user/${user.id}`);
+          const response = await fetch(`/api/deals/userliked/${user.id}`);
           if (response.ok) {
             const data = await response.json();
-            console.log(data);
-            setUserDeals(data);
+            setLikedDeals(data);
           }
         } catch (error) {
-          console.error("Error fetching user's deals:", error);
+          console.error("Error fetching liked deals:", error);
         }
       }
     };
 
-    fetchUserDeals();
+    fetchLikedDeals();
   }, [user]);
 
 return (
   <div>
     <div className="display-page">
-      <h2>My Deals:</h2>
-      {userDeals.length > 0 ?
-      (userDeals.map((post, index) => (
+      <h2>My Liked Deals:</h2>
+      {likedDeals.length > 0 ?
+      (likedDeals.map((post, index) => (
         <div className="container-fluid" key={index}>
           <div className="post-card" key={post._id}>
             <div className="row justify-content-center">
@@ -60,7 +59,7 @@ return (
         </div>
       ))
       ) : (
-          <h3>You have not created any deals yet.</h3>
+          <h3>You have not liked any deals yet.</h3>
       )}
 
       {/* <div className="pagination">

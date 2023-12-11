@@ -137,6 +137,12 @@ function MyMongoDB() {
     return await db.collection(CollName_Deal).find({ creatorId: userId }).toArray();
 }
 
+  myDB.getLikedDealsByUserId = async (userId) => {
+    const db = await connect();
+    return await db.collection(CollName_Deal).find({ likedUsers: userId }).toArray();
+  }
+  
+
   myDB.closeConnection = async () => {
     if (client.isConnected()) {
       await client.close();

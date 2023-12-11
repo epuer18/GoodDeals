@@ -56,7 +56,7 @@ router.get("/api/getUser", async (req, res) => {
 });
 
 
-router.get("/api/deals/user/:userId", async (req, res) => {
+  router.get("/api/deals/user/:userId", async (req, res) => {
     try {
         const userId = req.params.userId;
         const userDeals = await myDB.getDealsByUserId(userId);
@@ -69,7 +69,24 @@ router.get("/api/deals/user/:userId", async (req, res) => {
         res.status(500).json({ error: error.message });
     }
   });
-  
+
+
+  router.get("/api/deals/userliked/:userId", async (req, res) => {
+    try {
+        const userId = req.params.userId;
+        const likedDeals = await myDB.getLikedDealsByUserId(userId);
+        
+        if (!likedDeals) {
+            return res.status(404).json({ msg: "No liked deals found for this user." });
+        }
+
+        res.status(200).json(likedDeals);
+    } catch (error) {
+        console.error("Error fetching liked deals:", error);
+        res.status(500).json({ error: error.message });
+    }
+});
+
   
 router.post("/api/signup", async (req, res) => {
     try {
