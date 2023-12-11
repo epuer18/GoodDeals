@@ -29,13 +29,9 @@ export function DealDetail() {
     return <div>Loading...</div>;
   }
 
-  const isCreator = user && user.id === deal.creatorId;
-  console.log(user)
-  console.log(deal)
-//   if (user && deal.likedUsers) {
-//     const liked = deal.likedUsers.indexOf(user.id);
-// }
+  const createdAt = new Date(deal.createdAt).toLocaleString();
   
+  const isCreator = user && user.id === deal.creatorId;
 
   return (
     <div className="container-fluid">
@@ -46,6 +42,7 @@ export function DealDetail() {
           <p className="card-text">{deal.description}</p>
           <p className="card-category"># {deal.category} </p>
           <p className="card-creator">Postby: {deal.creatorName} </p>
+          <p className="card-creator">Posted at: {createdAt} </p>
           <hr className="solid"></hr>
           <div className="card-btn">
           <DealLikes dealId={dealId} initialLikes={deal.like} likedUsers={   
