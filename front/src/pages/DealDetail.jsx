@@ -44,6 +44,7 @@ export function DealDetail() {
         <div className="card-body">
           <h2 className="card-title">{deal.title}</h2>
           <p className="card-text">{deal.description}</p>
+          <p className="card-category"># {deal.category} </p>
           <p className="card-creator">Postby: {deal.creatorName} </p>
           <hr className="solid"></hr>
           <div className="card-btn">

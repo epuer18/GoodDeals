@@ -52,6 +52,13 @@
   text-align: right;
 }
 
+.card-category{
+  color:#4000ff;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: 'Quicksand';
+}
+
 .star-section {
   /* font-size: 20px; */
   /* border: #757575 solid 1px; */
