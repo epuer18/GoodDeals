@@ -9,6 +9,7 @@ import { DisplayPage } from "./pages/DisplayPage";
 import { LoginPage } from "./pages/LoginPage";
 import { SignUpPage } from "./pages/SignUpPage";
 import { LoginLink } from './components/LoginLink';
+import { SignUpLink } from './components/SignUpLink';
 import { SearchBox } from './components/SearchBox';
 import { SearchPage } from './pages/SearchPage';
 import { UserCreatedPage } from './pages/UserCreatedPage';
@@ -34,6 +35,7 @@ export default function App() {
           Create a Deal
         </Link>
         <SearchBox />
+        <SignUpLink />
         <LoginLink />
         </div>
           </div>

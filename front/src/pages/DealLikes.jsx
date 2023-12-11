@@ -51,7 +51,7 @@ export const DealLikes = ({ dealId, initialLikes, likedUsers }) => {
       className="star-section"
       role="button" // Indicate that the element is interactive
     >
-        {liked ? <span className="fa fa-star checked"></span> : <span className="fa fa-star-o unchecked"></span>}
+        {liked ? <span className="fa fa-heart checked"></span> : <span className="fa fa-heart-o unchecked"></span>}
         {likes}
       </span>
     );

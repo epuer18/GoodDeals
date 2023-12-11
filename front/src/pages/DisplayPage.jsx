@@ -53,7 +53,7 @@ export function DisplayPage({ category }) {
                 <div className="col-md-9 text-center">
                   <h3>{post.title}</h3>
                   <p className="post-content">{post.description}</p>
-                  <p className="fa fa-star likechecked">Likes: {post.like}</p>
+                  <p className="fa fa-heart likechecked">Likes: {post.like}</p>
                   <div>
 
                   <Link

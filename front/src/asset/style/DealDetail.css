@@ -61,7 +61,7 @@
 }
 
 .checked {
-  color: #FFB85F;
+  color: #ff0000;
   margin-right: 5px;
   font-size: 35px;
 }
@@ -77,7 +77,7 @@
 }
 
 .unchecked:hover {
-  color:#FFB85F;
+  color:#ff0000;
 }
 
 /* Edit button styles */
