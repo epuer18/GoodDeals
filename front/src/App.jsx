@@ -11,6 +11,7 @@ import { SignUpPage } from "./pages/SignUpPage";
 import { LoginLink } from './components/LoginLink';
 import { SearchBox } from './components/SearchBox';
 import { SearchPage } from './pages/SearchPage';
+import { MyAccountPage } from './pages/MyAccountPage';
 import "./asset/style/App.css";
 
 export default function App() {
@@ -64,6 +65,7 @@ export default function App() {
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/myaccount" element={<MyAccountPage />} />
       </Routes>
       <AppFooter />
     </div>
