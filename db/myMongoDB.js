@@ -134,7 +134,7 @@ function MyMongoDB() {
 
   myDB.getDealsByUserId = async (userId) => {
     const db = await connect();
-    return await db.collection(CollName_User).find({ creatorId: userId }).toArray();
+    return await db.collection(CollName_Deal).find({ creatorId: userId }).toArray();
 }
 
   myDB.closeConnection = async () => {

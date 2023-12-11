@@ -60,11 +60,9 @@ router.get("/api/deals/user/:userId", async (req, res) => {
     try {
         const userId = req.params.userId;
         const userDeals = await myDB.getDealsByUserId(userId);
-  
         if (!userDeals) {
             return res.status(404).json({ msg: "No deals found for this user." });
         }
-  
         res.status(200).json(userDeals);
     } catch (error) {
         console.error("Error fetching user's deals:", error);
