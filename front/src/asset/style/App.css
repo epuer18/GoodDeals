@@ -2,20 +2,20 @@
 
 /* Container styles */
 body {
-  background-color: #fceff2; /* Rose gold background color */
+  background-color: #fffefe; /* Rose gold background color */
   width: 100%;
   margin: 0%;
 }
 
 .container {
-  background-color: #fceff2; /* Rose gold background color */
+  background-color: #fffefe; /* Rose gold background color */
   width: 100%;
   margin: 0%;
 }
 
 /* Heading styles */
 h1 {
-  color: #FF69B4; /* Rose gold heading color */
+  color: #fe0883; /* Rose gold heading color */
   font-family: 'Pacifico';
   text-align: left;
   margin-left: 10px;
@@ -35,7 +35,7 @@ h1 {
 /* Button styles */
 .btn-primary {
   background-color: #FF69B4; /* Rose gold button background color */
-  color: #fff; /* White button text color */
+  color: #101010; /* White button text color */
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
@@ -68,7 +68,13 @@ footer {
 
 .user-functions .btn-primary {
   max-height: 44px;
-  min-width: 105px;
+  padding: 10px 15px;
+  min-width: 102px;
+}
+
+.signup .btn-primary{
+  min-width: 87.2px;
+  padding: 10px 15px;
 }
 
 .search-box{
@@ -77,12 +83,14 @@ footer {
   font-family: 'Quicksand';
 }
 
-.search-box input,button{
+.search-box button{
   padding: 10px;
   margin:auto;
 }
 
 .search-box input {
+  padding: 9px;
+  margin:auto;
   width: 100%;
   max-width: 400px;
 }
@@ -101,13 +109,13 @@ footer {
 
 @media (min-width: 1700px) {
   .search-box input {
-    width: 300px;
+    width: 480px;
   }
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1850px) {
   .search-box input {
-    width: 360px;
+    width: 550px;
   }
 }
 
