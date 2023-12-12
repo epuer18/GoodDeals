@@ -31,16 +31,17 @@
 }
 
 .post-card-img {
-  width: 100%;
+  float: right;
+  width: 90%;
+  max-width: 320px;
   height: auto;
-  /* width:fit-content; */
   border-radius: 8px;
 }
 
 .post-card h3 {
-  font-size: 35px;
+  font-size: 28px;
   color: #FF69B4; /* Rose gold heading color */
-  margin-bottom: 5px;
+  margin: 5px 0px 0px 0px;
   font-weight: bold;
   font-family: 'Quicksand';
 }
@@ -49,7 +50,7 @@
   color: #AD6690; /* Gold text color */
   margin: 0% 3%;
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
     /* font-family: Helvetica, Arial, sans-serif; */
 }
 
@@ -60,9 +61,25 @@
 
 .post-card .post-meta {
   color: #333; /* Dark text color */
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
+.post-card a{
+  margin: 0px 0px 5px 0px;
+  padding: 3px 15px;
+  border-radius: 2px;
+  font-size: 20px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.post-meta p {
+  margin: 0px 20px;
+}
 /* Pagination buttons */
 .pagination {
   display: flex;
