@@ -23,18 +23,18 @@ export default function App() {
     <div>
       <div className="container-fluid">
         <div className="row justify-content-center">
-          <div className="col-md-7 text-center">
+          <div className="col-md-6 text-center">
             <h1 className="page-heading">GoodDeals</h1>
             <p className="lead">
               The best place to discover and share deals online!
             </p>
           </div>
-          <div className="col-md-5 text-center">
+          <div className="col-md-6 text-center">
             <div className="user-functions">
+        <SearchBox />      
         <Link to="/createdeal" className="btn btn-primary">
-          Create a Deal
+          Post Deal
         </Link>
-        <SearchBox />
         <SignUpLink />
         <LoginLink />
         </div>

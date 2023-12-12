@@ -92,7 +92,7 @@ export function HomePage() {
               type="number"
               min="1"
               max={Math.ceil(posts.length / postsPerPage)}
-              placeholder="Jump to page"
+              placeholder="1"
               value={jumpToPageInput}
               onChange={(e) => setJumpToPageInput(e.target.value)}
             />

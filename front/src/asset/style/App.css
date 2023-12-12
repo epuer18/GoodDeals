@@ -26,7 +26,7 @@ h1 {
 .lead {
   color: #FFB85F; /* Gold text color */
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 28px;
   font-family: 'Quicksand';
   text-align: left;
   margin-left: 10px;
@@ -68,13 +68,47 @@ footer {
 
 .user-functions .btn-primary {
   max-height: 44px;
-  min-width: 142px;
+  min-width: 105px;
 }
 
 .search-box{
   margin-top: 20px;
   max-height: 44px;
   font-family: 'Quicksand';
+}
+
+.search-box input,button{
+  padding: 10px;
+  margin:auto;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (min-width: 760px) {
+  .search-box input {
+    width: 180px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .search-box input {
+    width: 240px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .search-box input {
+    width: 300px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .search-box input {
+    width: 360px;
+  }
 }
 
 .login .btn-primary{

@@ -7,6 +7,7 @@ export function DisplayPage({ category }) {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
+  const [jumpToPageInput, setJumpToPageInput] = useState("");
 
   useEffect(() => {
     async function fetchPosts() {
@@ -33,6 +34,12 @@ export function DisplayPage({ category }) {
   const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const jumpToPage = () => {
+    const pageNumber = parseInt(jumpToPageInput, 10);
+    if (pageNumber >= 1 && pageNumber <= Math.ceil(posts.length / postsPerPage)) {
+      setCurrentPage(pageNumber);
+    }
+  };
 
   return (
     <div>
@@ -81,6 +88,19 @@ export function DisplayPage({ category }) {
           </button>
         )}
         </div>
+        <div className="pagejump">
+        <p>1-{Math.ceil(posts.length / postsPerPage)} pages, now in {currentPage} page</p>
+            <input
+              type="number"
+              min="1"
+              max={Math.ceil(posts.length / postsPerPage)}
+              placeholder="1"
+              value={jumpToPageInput}
+              onChange={(e) => setJumpToPageInput(e.target.value)}
+            />
+            <button onClick={jumpToPage}>Jump</button>
+            
+          </div>
         <div className="next">
         {currentPage !== Math.ceil(posts.length / postsPerPage) && (
           <button
