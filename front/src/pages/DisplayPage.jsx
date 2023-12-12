@@ -70,6 +70,8 @@ export function DisplayPage({ category }) {
         ))}
 
         <div className="pagination">
+        <div className="prev">
+        {currentPage !== 1 && (
           <button
             onClick={() => paginate(currentPage - 1)}
             disabled={currentPage === 1}
@@ -77,6 +79,10 @@ export function DisplayPage({ category }) {
           >
             Previous Page
           </button>
+        )}
+        </div>
+        <div className="next">
+        {currentPage !== Math.ceil(posts.length / postsPerPage) && (
           <button
             onClick={() => paginate(currentPage + 1)}
             disabled={currentPage === Math.ceil(posts.length / postsPerPage)}
@@ -84,6 +90,8 @@ export function DisplayPage({ category }) {
           >
             Next Page
           </button>
+        )}
+        </div>
         </div>
       </div>
     </div>
