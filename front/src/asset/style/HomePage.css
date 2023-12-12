@@ -2,7 +2,7 @@
 
 /* Container styles */
 .container {
-  background-color: #fffefe; /* Rose gold background color */
+  background-color: #fceff2; /* Rose gold background color */
   /* padding: 20px; */
 }
 
@@ -21,7 +21,7 @@ h1 {
 /* Button styles */
 .btn-primary {
   background-color: #FF69B4; /* Rose gold button background color */
-  color: #fff; /* White button text color */
+  color: black; /* White button text color */
   border: none;
   border-radius: 4px;
   padding: 10px 20px;

@@ -1,26 +1,36 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState , useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
 
 export function MyAccountButton() {
   const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
 
   useEffect(() => {
-    const closeDropdown = (event) => {
-      if (!event.target.closest('.dropdown')) {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setShowDropdown(false);
       }
     };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [dropdownRef]);
 
-    document.addEventListener('mousedown', closeDropdown);
-    return () => document.removeEventListener('mousedown', closeDropdown);
+  useEffect(() => {
+    const handleEscapeKey = (event) => {
+      if (event.key === "Escape") {
+        setShowDropdown(false);
+      }
+    };
+    document.addEventListener("keydown", handleEscapeKey);
+    return () => document.removeEventListener("keydown", handleEscapeKey);
   }, []);
 
   return (
-    <div className="dropdown">
+    <div className="dropdown" ref={dropdownRef}>
       <button onClick={toggleDropdown} className="btn btn-primary">
         Me
       </button>
@@ -32,4 +42,4 @@ export function MyAccountButton() {
       )}
     </div>
   );
-};
+}

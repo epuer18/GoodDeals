@@ -2,7 +2,7 @@
 
 /* Container styles */
 .container-fluid {
-  background-color: #faf7f3; /* Rose gold background color */
+  background-color: #fffefe; /* Rose gold background color */
   padding: 0px;
   margin-top: 0%;
 }
@@ -28,8 +28,8 @@
 
 /* Title styles */
 .card-title {
-  color: #ff69b4; /* Rose gold heading color */
-  font-size: 35px;
+  color: #fe0883; /* Rose gold heading color */
+  font-size: 32px;
   margin-bottom: 10px;
   font-family: "Quicksand";
   font-weight: bolder;
@@ -37,14 +37,14 @@
 
 /* Description styles */
 .card-text {
-  color: #757575; 
+  color: black; 
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: Helvetica, Arial, sans-serif;
 }
 
 .card-creator{
-  color: #757575; 
+  color: black; 
   margin-bottom: 10px;
   font-size: 17px;
   font-family: Helvetica, Arial, sans-serif;
@@ -53,7 +53,7 @@
 }
 
 .card-category{
-  color:#4000ff;
+  color:#80089B;
   font-size: 20px;
   font-weight: bolder;
   font-family: 'Quicksand';
@@ -90,7 +90,7 @@
 /* Edit button styles */
 .btn-secondary {
   background-color: #ff69b4; /* Rose gold button background color */
-  color: #fff; /* White button text color */
+  color: black; /* White button text color */
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
@@ -104,7 +104,7 @@
 /* Like button styles */
 .card-body button {
   background-color: #AD6690; /* Rose gold button background color */
-  color: #fff; /* White button text color */
+  color: black; /* White button text color */
   border: none;
   border-radius: 4px;
   padding: 10px 10px;
@@ -131,7 +131,7 @@
 /* Add comment button styles */
 .btn-primary {
   background-color: #ff69b4; /* Rose gold button background color */
-  color: #fff; /* White button text color */
+  color: black; /* White button text color */
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
@@ -143,7 +143,7 @@
 
 /* Comments styles */
 h3 {
-  color: #ff69b4; /* Rose gold heading color */
+  color: #fe0883; /* Rose gold heading color */
   font-size: 24px;
   margin-top: 20px;
 }
@@ -188,7 +188,7 @@ form {
   padding: 10px 20px; /* Adjust padding as needed */
   margin: 0px;
   background-color: #AD6690; /* Change the button background color */
-  color: #fff; /* Set text color to white */
+  color: black; /* Set text color to white */
   display: flex;
   justify-content: right;
   font-size: medium;
@@ -198,8 +198,8 @@ form {
 .comment-form button {
   margin: 10px 0px 0px 0px; /* Add some spacing between textarea and button */
   padding: 10px 2cqi; /* Adjust padding as needed */
-  background-color: #ff69b4; /* Change the button background color */
-  color: #fff; /* Set text color to white */
+  background-color: #fe0883; /* Change the button background color */
+  color: black; /* Set text color to white */
   display: flex;
   justify-content: right;
   text-align: right;

@@ -7,14 +7,14 @@
     display: none;
     position: absolute;
     left: 0; 
-    background-color: #fde5e8;
+    background-color: #fceff2;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
   .dropdown-content a {
-    color: #FF69B4;
+    color: #fe0883;
     font-size: 15px;
     padding: 5px 5px;
     text-decoration: none;
@@ -22,6 +22,7 @@
   }
   
   .dropdown:hover .dropdown-content {
+    /* display:table */
     display:contents;
   }
   

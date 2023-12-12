@@ -13,7 +13,7 @@
 }
 
 .display-page h2 {
-  color: #FF69B4; 
+  color: #fe0883; 
   padding-left: 20px;
   margin: 10px 0px;
   font-family: 'Pacifico';
@@ -46,14 +46,14 @@
 
 .post-card h3 {
   font-size: 28px;
-  color: #FF69B4; /* Rose gold heading color */
+  color: #fe0883; /* Rose gold heading color */
   margin: 5px 0px 0px 0px;
   font-weight: bold;
   font-family: 'Quicksand';
 }
 
 .post-card p {
-  color: #AD6690; /* Gold text color */
+  color: #80089B; /* Gold text color */
   margin: 0% 3%;
   text-align: left;
   font-size: 18px;
@@ -61,12 +61,12 @@
 }
 
 .post-card .post-content {
-  color: #757575; /* Dark text color */
+  color: #101010; /* Dark text color */
   margin-top: 0%;
 }
 
 .post-card .post-meta {
-  color: #333; /* Dark text color */
+  color: #101010; /* Dark text color */
   margin-top: 5px;
 }
 
@@ -119,7 +119,7 @@
 
 .pagination button {
   background-color: #FFB85F; /* Rose gold button background color */
-  color: #fff; /* White button text color */
+  color: black; /* White button text color */
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
@@ -129,5 +129,5 @@
 }
 
 .pagination button:hover {
-  background-color: #ff1493; /* Lighter rose gold on hover */
+  background-color: #fe0883; /* Lighter rose gold on hover */
 }
