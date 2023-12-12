@@ -31,26 +31,24 @@ nav a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  transition: color 0.3s; /* Smooth color transition on hover */
+  transition: color 0.2s;
+  padding: 8px 20px; 
 }
 
 /* Style the buttons on hover */
 nav a:hover {
-  color: #fe0883; /* Change text color to a deeper pink on hover */
+  color: #fff; /* Change text color to a deeper pink on hover */
+  background-color: #fe0883;
 }
 
-/* Style the Home button differently */
-nav ul li:first-child a {
-  background-color: #ff69b4; /* Pink background color for Home button */
-  color: #000;
-  border-radius: 5px;
-  padding: 8px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle button shadow */
-}
 
 /* Style for the search box */
 .search-box {
   display: flex;
+}
+.active-link {
+  color: #fff; /* Change text color to a deeper pink on hover */
+  background-color: #fe0883;
 }
 
 .search-box input {
