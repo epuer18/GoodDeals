@@ -6,6 +6,7 @@ export function SignUpPage(){
         email: '',
         username: '',
         password: '',
+        confirmPassword: '',
      });
 
      const navigate  = useNavigate();
@@ -19,6 +20,12 @@ export function SignUpPage(){
 
      const handleSubmit = async (event) =>{
         event.preventDefault();
+
+        if (formData.password !== formData.confirmPassword) {
+            alert('Passwords do not match!');
+            return;
+        }
+
         const res = await fetch("/api/signup", {
             method: "POST",
             headers: {
@@ -75,6 +82,18 @@ export function SignUpPage(){
                         value={formData.password}
                         onChange={handleChange}
                         placeholder="Password"
+                        className="form-control"
+                        required
+                        />
+                </div>
+                <label htmlFor="password">Confirm Password</label>
+                <div className="form-group mb-3">
+                    <input
+                        type="password"
+                        name="confirmPassword"
+                        value={formData.confirmPassword}
+                        onChange={handleChange}
+                        placeholder="Confirm Password"
                         className="form-control"
                         required
                         />
