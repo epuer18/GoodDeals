@@ -2,20 +2,20 @@
 
 /* Container styles */
 body {
-  background-color: #fceff2; /* Rose gold background color */
+  background-color: rgb(248, 243, 246); /* Rose gold background color */
   width: 100%;
   margin: 0%;
 }
 
 .container {
-  background-color: #fceff2; /* Rose gold background color */
+  background-color: rgb(248, 243, 246); /* Rose gold background color */
   width: 100%;
   margin: 0%;
 }
 
 /* Heading styles */
 h1 {
-  color: #ff1493; /* Rose gold heading color */
+  color: #fe0883; /* Rose gold heading color */
   font-family: 'Pacifico';
   text-align: left;
   margin-left: 10px;
@@ -24,7 +24,8 @@ h1 {
 
 /* Lead text styles */
 .lead {
-  color: #34708F; /* Gold text color */
+  color: #425FAD; 
+  /* color: #7C945B; */
   font-weight: bolder;
   font-size: 28px;
   font-family: 'Quicksand';
@@ -46,17 +47,17 @@ h1 {
 }
 
 .btn-primary:hover {
-  background-color: #ff1493; /* Lighter rose gold on hover */
+  background-color: #fe0883; /* Lighter rose gold on hover */
 }
 
 footer {
   text-align: center;
   font-family: 'Pacifico';
-  background-color: #fceff2;
+  background-color: rgb(248, 243, 246);
 }
 
 .text-muted{
-  color:#34708F!important;
+  color:#425FAD!important;
 }
 
 .user-functions{
@@ -78,6 +79,7 @@ footer {
 }
 
 .search-box input,button{
+  color:#425FAD;
   padding: 10px;
   margin:auto;
 }
