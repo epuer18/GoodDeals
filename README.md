@@ -15,11 +15,11 @@ View Design Document: [Design Document](https://docs.google.com/document/d/1mLVD
 **Without User Account:**
 
 - **View Deal:** Users and view deals based on different categories
-- **Search Deal:** Users can search deals by title and description.
+- **Search Deal:** Users can search deals by title and description
 
 **With User Account:**
 
-- **User Management:** Users can register for a new account, login and logout.
+- **User Management:** Users can register for a new account, login and logout
 - **Post Deal:** Users can share new deals by posting links and relevant information
 - **Edit Deal:** Users can modify their previously posted deals to update details
 - **Delete Deal:** Users can remove their deals
@@ -27,9 +27,9 @@ View Design Document: [Design Document](https://docs.google.com/document/d/1mLVD
 - **Post Comment:** Users can comment on posted deals
 - **Delete Comment:** Users have the option to remove their comments
 - **Like:** Users can show appreciation for a deal by liking it
-- **Cancel Like:** Users have the option to cancel their likes.
-- **View Posted Deal:** Users can view their posted deals in the Posted Deals section.
-- **View Liked Deal:** Users can view their liked deals in the Liked Deals section.
+- **Cancel Like:** Users have the option to cancel their likes
+- **View Posted Deal:** Users can view their posted deals in the Posted Deals section
+- **View Liked Deal:** Users can view their liked deals in the Liked Deals section
 
 - **Deals Ranking:** A dynamic ranking system that ranks deals based on user likes
 - **Deals Display:** Deals are organized and displayed on their respective category pages
@@ -130,7 +130,7 @@ View the presentation of the project in this [google slides](https://docs.google
 
 ## Link to the Video Demonstration
 
-Watch a detailed walkthrough of the project in this [video demonstration](https://youtu.be/bLCbPwpOJ14)
+Watch a detailed walkthrough of the project in this [video demonstration](https://youtu.be/bW8c_UuXeh4)
 
 ## License
 
