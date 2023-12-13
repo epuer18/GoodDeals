@@ -18,15 +18,15 @@
     }
 
 .form-signup button {
+    color:black;
+    background-color:#FF69B4;
     width: 180px; 
     max-width: 300px;
     padding: 10px;
     margin: 15px auto; 
-    
     }
 
 .form-signup button:hover {
     color: white;
     background-color: #fe0883;
-
 }

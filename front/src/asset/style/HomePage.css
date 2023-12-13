@@ -11,12 +11,6 @@ h1 {
   color: #FF69B4; /* Rose gold heading color */
 }
 
-/* Lead text styles */
-.lead {
-  color: #eac80c; /* Gold text color */
-  font-weight: bolder;
-  font-size: 30px;
-}
 
 /* Button styles */
 .btn-primary {
