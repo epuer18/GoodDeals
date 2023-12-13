@@ -22,7 +22,6 @@ export default function App() {
       <div className="container-fluid">
         <div className="row justify-content-center">
           <div className="col-md-6 text-center">
-            {/* <h1 className="page-heading">GoodDeals</h1> */}
             <Link to="/" className="page-heading-link">
               <h1 className="page-heading">GoodDeals</h1>
             </Link>

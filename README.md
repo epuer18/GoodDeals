@@ -2,10 +2,11 @@
 
 ## This branch is for Project 4 - GoodDeals2.0
 
-## Project Objective 
+## Project Objective
+
 GoodDeals is an online platform designed for shoppers to discover, share, and discuss the best deals available across various categories. Users can post their found deals, comment on others, and rank them. With a focus on community interaction and ease of use, GoodDeals not only promotes savings but also facilitates a space for shoppers to interact and help each other find the best discounts around.
 
-Link to GoodDeals Web Application: (https://gooddeals.onrender.com)
+Link to GoodDeals Web Application: (https://gooddealsapp.onrender.com)
 
 ## Design Document
 
@@ -14,10 +15,12 @@ View Design Document: [Design Document](https://docs.google.com/document/d/1mLVD
 ## Features
 
 **Without User Account:**
+
 - **View Deal:** Users and view deals based on different categories
-- **Search Deal:** Users can search deals by title and description. 
+- **Search Deal:** Users can search deals by title and description.
 
 **With User Account:**
+
 - **User Management:** Users can register for a new account, login and logout.
 - **Post Deal:** Users can share new deals by posting links and relevant information
 - **Edit Deal:** Users can modify their previously posted deals to update details
@@ -36,14 +39,20 @@ View Design Document: [Design Document](https://docs.google.com/document/d/1mLVD
 ## Screenshot
 
 Home Page:
-![Home page screenshot1](https://github.com/Yushicui/GoodDeals/blob/main/screenshot/Homepage.jpg)
-![Home page screenshot2](https://github.com/Yushicui/GoodDeals/blob/main/screenshot/HomePage2.jpg)
+![Home page screenshot1](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/HomePage01.jpg)
+![Home page screenshot2](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/HomePage02.jpg)
 
-Create Deal Page:
-![Create Deal page screenshot](https://github.com/Yushicui/GoodDeals/blob/main/screenshot/CreateDealPage.jpg)
+SignIn Page:
+![SignIn page screenshot](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/SigninPage.jpg)
+
+Post Deal Page:
+![Create Deal page screenshot](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/PostDealPage.jpg)
 
 Deal Detail Page:
-![Deal Detail screenshot](https://github.com/Yushicui/GoodDeals/blob/main/screenshot/DealDetailPage.jpg)
+![Deal Detail screenshot](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/SigninPage.jpg)
+
+User Liked Deal Page:
+![Deal Detail screenshot](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/MyLikedDealPage.jpg)
 
 ## Tech Stack
 
