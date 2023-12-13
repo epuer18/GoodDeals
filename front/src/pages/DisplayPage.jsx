@@ -37,21 +37,23 @@ export function DisplayPage({ category }) {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const jumpToPage = () => {
     const pageNumber = parseInt(jumpToPageInput, 10);
-    if (pageNumber >= 1 && pageNumber <= Math.ceil(posts.length / postsPerPage)) {
+    if (
+      pageNumber >= 1 &&
+      pageNumber <= Math.ceil(posts.length / postsPerPage)
+    ) {
       setCurrentPage(pageNumber);
     }
   };
 
   return (
     <div>
-
       <div className="display-page">
         <h2>Deals - {category.replace("/category/", "")} </h2>
         {currentPosts.map((post, index) => (
           <PostCard key={index} post={post} />
         ))}
 
-         <Pagination
+        <Pagination
           postsPerPage={postsPerPage}
           totalPosts={posts.length}
           paginate={paginate}
@@ -60,7 +62,6 @@ export function DisplayPage({ category }) {
           jumpToPageInput={jumpToPageInput}
           setJumpToPageInput={setJumpToPageInput}
         />
-
       </div>
     </div>
   );

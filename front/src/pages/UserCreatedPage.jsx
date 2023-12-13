@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { UserContext } from '../components/user/userContext';
+import React, { useState, useEffect, useContext } from "react";
+import { UserContext } from "../components/user/userContext";
 import { Pagination } from "../components/Pagination";
 import { PostCard } from "../components/PostCard";
 import "../asset/style/DisplayPage.css";
 
-export function UserCreatedPage () {
+export function UserCreatedPage() {
   const [userDeals, setUserDeals] = useState([]);
   const { user } = useContext(UserContext);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(10); 
+  const [postsPerPage] = useState(10);
   const [jumpToPageInput, setJumpToPageInput] = useState("");
 
   useEffect(() => {
@@ -35,34 +35,36 @@ export function UserCreatedPage () {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const jumpToPage = () => {
     const pageNumber = parseInt(jumpToPageInput, 10);
-    if (pageNumber >= 1 && pageNumber <= Math.ceil(userDeals.length / postsPerPage)) {
+    if (
+      pageNumber >= 1 &&
+      pageNumber <= Math.ceil(userDeals.length / postsPerPage)
+    ) {
       setCurrentPage(pageNumber);
     }
   };
 
-
-return (
+  return (
     <div>
       <div className="display-page">
         <h2>My Posted Deals:</h2>
-        {currentPosts.length > 0 ?
-          (currentPosts.map((post, index) => (
+        {currentPosts.length > 0 ? (
+          currentPosts.map((post, index) => (
             <PostCard key={index} post={post} />
           ))
-          ) : (
+        ) : (
           <h3>You have not created any deals yet.</h3>
         )}
 
         {userDeals.length > 0 && (
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={userDeals.length}
-          paginate={paginate}
-          currentPage={currentPage}
-          jumpToPage={jumpToPage}
-          jumpToPageInput={jumpToPageInput}
-          setJumpToPageInput={setJumpToPageInput}
-        />
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={userDeals.length}
+            paginate={paginate}
+            currentPage={currentPage}
+            jumpToPage={jumpToPage}
+            jumpToPageInput={jumpToPageInput}
+            setJumpToPageInput={setJumpToPageInput}
+          />
         )}
       </div>
     </div>

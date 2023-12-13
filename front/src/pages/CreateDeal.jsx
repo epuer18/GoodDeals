@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../components/user/userContext";
-import { CreateDealForm } from '../components/deal/CreateDealForm';
+import { CreateDealForm } from "../components/deal/CreateDealForm";
 
 import "../asset/style/CreateDeal.css";
 
@@ -18,7 +18,7 @@ export function CreateDeal() {
     creatorName: "",
   });
 
-  const [error, setError] = useState(""); 
+  const [error, setError] = useState("");
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
 
@@ -27,10 +27,13 @@ export function CreateDeal() {
       alert("You need to be logged in to create a deal.");
       navigate("/login");
     } else {
-      setDealData((prevData) => ({ ...prevData, creatorId: user.id, creatorName: user.username }));
+      setDealData((prevData) => ({
+        ...prevData,
+        creatorId: user.id,
+        creatorName: user.username,
+      }));
     }
   }, [user, navigate]);
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -57,27 +60,25 @@ export function CreateDeal() {
     navigate(`/deals/id/${dealId}`);
   };
 
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setDealData({ ...dealData, [name]: value });
   };
-  
 
   return (
     <>
-    {user ? (
-      <div className="container mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-10">
-          <h2>Post Deal</h2>
-          <div className="create-deal-form">
-          <CreateDealForm 
-            dealData={dealData} 
-            handleChange={handleChange} 
-            handleSubmit={handleSubmit} 
-          />
-          {/* <form onSubmit={handleSubmit}>
+      {user ? (
+        <div className="container mt-5">
+          <div className="row justify-content-center">
+            <div className="col-md-10">
+              <h2>Post Deal</h2>
+              <div className="create-deal-form">
+                <CreateDealForm
+                  dealData={dealData}
+                  handleChange={handleChange}
+                  handleSubmit={handleSubmit}
+                />
+                {/* <form onSubmit={handleSubmit}>
             <label htmlFor="title">Title</label>
             <div className="form-group mb-3">
               <input
@@ -145,15 +146,15 @@ export function CreateDeal() {
               Submit Deal
             </button>
           </form> */}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    ) : (
-      <div>Not logged in</div>
-    )}
-    {error && <div className="alert alert-danger">{error}</div>}
-  </>
+      ) : (
+        <div>Not logged in</div>
+      )}
+      {error && <div className="alert alert-danger">{error}</div>}
+    </>
   );
 }
 

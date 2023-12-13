@@ -22,7 +22,6 @@ router.post("/api/deals/deal", async (req, res) => {
   }
 });
 
-
 router.get("/api/deals/id/:id", async (req, res) => {
   try {
     const deal = await myDB.getDealById(req.params.id);
@@ -76,34 +75,30 @@ router.get("/api/deals/category/:categoryName", async (req, res) => {
   }
 });
 
-
 router.put("/api/deals/id/:dealId/like", async function (req, res) {
+  const dealId = req.params.dealId;
+  const userId = req.body.userId;
 
-    const dealId = req.params.dealId;
-    const userId = req.body.userId;
-    
-    try {
-      
-        const deal = await myDB.getDealById(dealId);
-        if (!deal) {
-          return res.status(404).json({ message: "Deal not found" });
-        }
-        const userIndex = deal.likedUsers.indexOf(userId);
-        if (userIndex === -1) {
-          deal.like++; 
-          deal.likedUsers.push(userId); 
-          console.log(deal)
-        } else {
-          deal.like--; 
-          deal.likedUsers.splice(userIndex, 1); 
-        }
-        const result = await myDB.updateDeal(deal._id, deal);
-        res.json({ like: deal.like, userLiked: userIndex === -1 });
-    } catch (error) {
-      res.status(500).json({ message: "Internal server error" });
+  try {
+    const deal = await myDB.getDealById(dealId);
+    if (!deal) {
+      return res.status(404).json({ message: "Deal not found" });
     }
-    });
-
+    const userIndex = deal.likedUsers.indexOf(userId);
+    if (userIndex === -1) {
+      deal.like++;
+      deal.likedUsers.push(userId);
+      console.log(deal);
+    } else {
+      deal.like--;
+      deal.likedUsers.splice(userIndex, 1);
+    }
+    const result = await myDB.updateDeal(deal._id, deal);
+    res.json({ like: deal.like, userLiked: userIndex === -1 });
+  } catch (error) {
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
 
 router.post("/api/deals/id/:dealId/comments", async (req, res) => {
   try {
@@ -118,7 +113,7 @@ router.post("/api/deals/id/:dealId/comments", async (req, res) => {
       text,
       userId,
       dealId,
-      username
+      username,
     };
 
     const result = await myDB.createComment(comment);

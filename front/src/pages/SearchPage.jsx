@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Pagination } from "../components/Pagination";
 import { PostCard } from "../components/PostCard";
 import "../asset/style/DisplayPage.css";
 
-export function SearchPage (){
+export function SearchPage() {
   const [posts, setPosts] = useState([]);
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,7 +16,7 @@ export function SearchPage (){
   };
 
   const query = useQuery();
-  const searchTerm = query.get('query');
+  const searchTerm = query.get("query");
 
   useEffect(() => {
     async function fetchPosts() {
@@ -36,51 +36,55 @@ export function SearchPage (){
   }, []);
 
   const filteredPosts = searchTerm
-    ? posts.filter(post =>
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.description.toLowerCase().includes(searchTerm.toLowerCase())
+    ? posts.filter(
+        (post) =>
+          post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          post.description.toLowerCase().includes(searchTerm.toLowerCase()),
       )
     : [];
 
-    filteredPosts.sort((a, b) => b.like - a.like);
-    const indexOfLastPost = currentPage * postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
+  filteredPosts.sort((a, b) => b.like - a.like);
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
 
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
-    const jumpToPage = () => {
-      const pageNumber = parseInt(jumpToPageInput, 10);
-      if (pageNumber >= 1 && pageNumber <= Math.ceil(filteredPosts.length / postsPerPage)) {
-        setCurrentPage(pageNumber);
-      }
-    };
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const jumpToPage = () => {
+    const pageNumber = parseInt(jumpToPageInput, 10);
+    if (
+      pageNumber >= 1 &&
+      pageNumber <= Math.ceil(filteredPosts.length / postsPerPage)
+    ) {
+      setCurrentPage(pageNumber);
+    }
+  };
 
   return (
-        <div>
-          <div className="display-page">
-            <h2>Search Results for: {searchTerm}</h2>
-            {currentPosts.length > 0 ? 
-            (currentPosts.map((post, index) => (
-                <PostCard key={index} post={post} />
-            ))
-            ) : (
-                <h3>No results found.</h3>
-            )}
+    <div>
+      <div className="display-page">
+        <h2>Search Results for: {searchTerm}</h2>
+        {currentPosts.length > 0 ? (
+          currentPosts.map((post, index) => (
+            <PostCard key={index} post={post} />
+          ))
+        ) : (
+          <h3>No results found.</h3>
+        )}
 
-            {filteredPosts.length > 0 && (
-            <Pagination
-                postsPerPage={postsPerPage}
-                totalPosts={filteredPosts.length}
-                paginate={paginate}
-                currentPage={currentPage}
-                jumpToPage={jumpToPage}
-                jumpToPageInput={jumpToPageInput}
-                setJumpToPageInput={setJumpToPageInput}
-            />
-            )}
-          </div>
-        </div>
-      );
-    }
+        {filteredPosts.length > 0 && (
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={filteredPosts.length}
+            paginate={paginate}
+            currentPage={currentPage}
+            jumpToPage={jumpToPage}
+            jumpToPageInput={jumpToPageInput}
+            setJumpToPageInput={setJumpToPageInput}
+          />
+        )}
+      </div>
+    </div>
+  );
+}
 
 SearchPage.propTypes = {};

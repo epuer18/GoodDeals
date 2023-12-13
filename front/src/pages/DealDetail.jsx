@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { DeleteDeal } from "../components/deal/DeleteDeal";
 import { UserContext } from "../components/user/userContext";
 import { Comments } from "../components/deal/Comments";
-import { DealLikes}from '../components/deal/DealLikes';
+import { DealLikes } from "../components/deal/DealLikes";
 
 import "../asset/style/DealDetail.css";
 
@@ -30,15 +30,15 @@ export function DealDetail() {
   }
 
   const options = {
-    year: 'numeric', 
-    month: 'numeric', 
-    day: 'numeric', 
-    hour: 'numeric', 
-    minute: '2-digit', 
-    hour12: true
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
   };
 
-  const createdAt = new Date(deal.createdAt).toLocaleString('en-US', options);
+  const createdAt = new Date(deal.createdAt).toLocaleString("en-US", options);
 
   const isCreator = user && user.id === deal.creatorId;
 
@@ -54,19 +54,26 @@ export function DealDetail() {
           <p className="card-creator">Posted at: {createdAt} </p>
           <hr className="solid"></hr>
           <div className="card-btn">
-          <DealLikes dealId={dealId} initialLikes={deal.like} likedUsers={   
-            (user && deal.likedUsers)
-          ? 
-          (deal.likedUsers.indexOf(user.id)+1): -1}/>
-              {isCreator && (
-                <>
-            <Link
-              to={`/deals/edit/id/${dealId}`}
-              className="btn btn-secondary ">
-              Edit
-            </Link>
-            <DeleteDeal dealId={dealId} />
-            </>)}
+            <DealLikes
+              dealId={dealId}
+              initialLikes={deal.like}
+              likedUsers={
+                user && deal.likedUsers
+                  ? deal.likedUsers.indexOf(user.id) + 1
+                  : -1
+              }
+            />
+            {isCreator && (
+              <>
+                <Link
+                  to={`/deals/edit/id/${dealId}`}
+                  className="btn btn-secondary "
+                >
+                  Edit
+                </Link>
+                <DeleteDeal dealId={dealId} />
+              </>
+            )}
           </div>
           <Comments dealId={dealId} user={user} />
         </div>

@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { UserContext } from '../components/user/userContext';
+import React, { useState, useEffect, useContext } from "react";
+import { UserContext } from "../components/user/userContext";
 import { Pagination } from "../components/Pagination";
 import { PostCard } from "../components/PostCard";
 import "../asset/style/DisplayPage.css";
 
-export function UserLikedPage () {
+export function UserLikedPage() {
   const [likedDeals, setLikedDeals] = useState([]);
   const { user } = useContext(UserContext);
   const [currentPage, setCurrentPage] = useState(1);
@@ -35,39 +35,40 @@ export function UserLikedPage () {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const jumpToPage = () => {
     const pageNumber = parseInt(jumpToPageInput, 10);
-    if (pageNumber >= 1 && pageNumber <= Math.ceil(likedDeals.length / postsPerPage)) {
+    if (
+      pageNumber >= 1 &&
+      pageNumber <= Math.ceil(likedDeals.length / postsPerPage)
+    ) {
       setCurrentPage(pageNumber);
     }
   };
 
-
-return (
-  <div>
-    <div className="display-page">
-      <h2>My Liked Deals:</h2>
-      {currentPosts.length > 0 ? (
+  return (
+    <div>
+      <div className="display-page">
+        <h2>My Liked Deals:</h2>
+        {currentPosts.length > 0 ? (
           currentPosts.map((post, index) => (
             <PostCard key={index} post={post} />
           ))
-      ) : (
+        ) : (
           <h3>You have not liked any deals yet.</h3>
-      )}
+        )}
 
-     {likedDeals.length > 0 && (
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={likedDeals.length}
-          paginate={paginate}
-          currentPage={currentPage}
-          jumpToPage={jumpToPage}
-          jumpToPageInput={jumpToPageInput}
-          setJumpToPageInput={setJumpToPageInput}
-        />
-      )}
-
+        {likedDeals.length > 0 && (
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={likedDeals.length}
+            paginate={paginate}
+            currentPage={currentPage}
+            jumpToPage={jumpToPage}
+            jumpToPageInput={jumpToPageInput}
+            setJumpToPageInput={setJumpToPageInput}
+          />
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
 }
 
 UserLikedPage.propTypes = {};

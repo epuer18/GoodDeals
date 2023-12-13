@@ -8,15 +8,15 @@ body {
 }
 
 .container {
-  background-color: rgb(248, 243, 246); 
+  background-color: rgb(248, 243, 246);
   width: 100%;
   margin: 0%;
 }
 
 /* Heading styles */
 h1 {
-  color: #fe0883; 
-  font-family: 'Pacifico';
+  color: #fe0883;
+  font-family: "Pacifico";
   text-align: left;
   margin-left: 10px;
   font-size: 48px;
@@ -24,37 +24,37 @@ h1 {
 
 /* Lead text styles */
 .lead {
-  color: #425FAD; 
+  color: #425fad;
   font-weight: bolder;
   font-size: 28px;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   text-align: left;
   margin-left: 10px;
 }
 
 /* Button styles */
 .btn-primary {
-  background-color: #FF69B4; 
-  color: black; 
+  background-color: #ff69b4;
+  color: black;
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
   margin-top: 20px;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
-  background-color: #fe0883; 
+  background-color: #fe0883;
 }
 
 footer {
   text-align: center;
-  font-family: 'Pacifico';
-  color:#425FAD
+  font-family: "Pacifico";
+  color: #425fad;
 }
 
-.user-functions{
+.user-functions {
   display: flex;
   justify-content: space-between;
   margin: 25px 0px;
@@ -65,27 +65,27 @@ footer {
 .user-functions .btn-primary {
   max-height: 44px;
   min-width: 105px;
-  background-color: #FF69B4;
-  white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
+  background-color: #ff69b4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.user-functions .btn-primary:hover{
+.user-functions .btn-primary:hover {
   background-color: #fe0883;
-} 
+}
 
-
-.search-box{
+.search-box {
   margin-top: 20px;
   max-height: 44px;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
 }
 
-.search-box input,button{
-  color:#333;
+.search-box input,
+button {
+  color: #333;
   padding: 10px;
-  margin:auto;
+  margin: auto;
 }
 
 .search-box input {
@@ -117,20 +117,20 @@ footer {
   }
 }
 
-.login .btn-primary{
-  background-color: #FFB85F;
+.login .btn-primary {
+  background-color: #ffb85f;
   min-width: 80px;
 }
 
-.login .btn-primary:hover{
+.login .btn-primary:hover {
   background-color: #f99d2d;
 }
 
-.signup .btn-primary{
-  background-color: #FFB85F;
+.signup .btn-primary {
+  background-color: #ffb85f;
   min-width: 80px;
 }
 
-.signup .btn-primary:hover{
+.signup .btn-primary:hover {
   background-color: #f99d2d;
 }

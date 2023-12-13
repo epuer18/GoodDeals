@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { EditDealForm } from '../components/deal/EditDealForm';
+import { EditDealForm } from "../components/deal/EditDealForm";
 import "../asset/style/EditDeal.css";
 
 export function EditDeal() {
@@ -74,12 +74,12 @@ export function EditDeal() {
         <div className="col-md-10">
           <h2>Edit Deal</h2>
           <div className="edit-form">
-          <EditDealForm
-            dealData={dealData} 
-            handleChange={handleChange} 
-            handleSubmit={handleSubmit} 
-          />
-          {/* <form onSubmit={handleSubmit}>
+            <EditDealForm
+              dealData={dealData}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+            />
+            {/* <form onSubmit={handleSubmit}>
             <label htmlFor="title">Title</label>
             <div className="form-group mb-3">
               <input
@@ -143,7 +143,6 @@ export function EditDeal() {
               Update Deal
             </button>
           </form> */}
-          
           </div>
         </div>
       </div>

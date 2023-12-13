@@ -26,7 +26,7 @@ export function HomePage() {
 
     fetchPosts();
   }, []);
-  
+
   const sortedPosts = posts.sort((a, b) => b.like - a.like);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -35,11 +35,13 @@ export function HomePage() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const jumpToPage = () => {
     const pageNumber = parseInt(jumpToPageInput, 10);
-    if (pageNumber >= 1 && pageNumber <= Math.ceil(posts.length / postsPerPage)) {
+    if (
+      pageNumber >= 1 &&
+      pageNumber <= Math.ceil(posts.length / postsPerPage)
+    ) {
       setCurrentPage(pageNumber);
     }
   };
-
 
   return (
     <div>
@@ -49,16 +51,15 @@ export function HomePage() {
           <PostCard key={index} post={post} />
         ))}
 
-<Pagination
-                postsPerPage={postsPerPage}
-                totalPosts={posts.length}
-                paginate={paginate}
-                currentPage={currentPage}
-                jumpToPage={jumpToPage}
-                jumpToPageInput={jumpToPageInput}
-                setJumpToPageInput={setJumpToPageInput}
-            />
-
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={posts.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          jumpToPage={jumpToPage}
+          jumpToPageInput={jumpToPageInput}
+          setJumpToPageInput={setJumpToPageInput}
+        />
       </div>
     </div>
   );

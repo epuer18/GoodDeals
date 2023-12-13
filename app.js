@@ -22,31 +22,44 @@ const app = express();
 
 const myStrategy = new LocalStrategy(
   {
-    usernameField: 'email',
-    passwordField: 'password',
+    usernameField: "email",
+    passwordField: "password",
   },
   async function verify(email, password, cb) {
-  try {
-    const user = await myDB.getUserByEmail(email);
+    try {
+      const user = await myDB.getUserByEmail(email);
 
-    if (!user) {
-      return cb(null, false, { message: "Incorrect email or password" });
-    }
-
-    crypto.pbkdf2(password, Buffer.from(user.salt, "hex"), 310000, 32, "sha256", function (err, hashedPassword) {
-      if (err) {
-        return cb(err);
-      }
-
-      if (!crypto.timingSafeEqual(Buffer.from(user.hashedPassword, "hex"), hashedPassword)) {
+      if (!user) {
         return cb(null, false, { message: "Incorrect email or password" });
       }
-      cb(null, { id: user.id, email: email }); 
-    });
-  } catch (err) {
-    cb(err);
-  }
-});
+
+      crypto.pbkdf2(
+        password,
+        Buffer.from(user.salt, "hex"),
+        310000,
+        32,
+        "sha256",
+        function (err, hashedPassword) {
+          if (err) {
+            return cb(err);
+          }
+
+          if (
+            !crypto.timingSafeEqual(
+              Buffer.from(user.hashedPassword, "hex"),
+              hashedPassword,
+            )
+          ) {
+            return cb(null, false, { message: "Incorrect email or password" });
+          }
+          cb(null, { id: user.id, email: email });
+        },
+      );
+    } catch (err) {
+      cb(err);
+    }
+  },
+);
 
 passport.use(myStrategy);
 
@@ -63,7 +76,7 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-  })
+  }),
 );
 
 passport.serializeUser(function (user, cb) {
@@ -80,7 +93,6 @@ passport.deserializeUser(function (user, cb) {
 
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 app.use("/", indexRouter);
 app.use("/", authRouter);

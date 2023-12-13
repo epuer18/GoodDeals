@@ -57,6 +57,7 @@ Deal Detail Page:
 - MongoDB
 
 ## Tech Requirements
+
 - React: v18.2.0 or above
 - Node.js: v20.6.1 or above
 - MongoDB: v6.1.0 or above

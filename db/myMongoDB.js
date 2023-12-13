@@ -31,7 +31,7 @@ function MyMongoDB() {
 
     const dealWithTimestamp = {
       ...deal,
-      createdAt: new Date()
+      createdAt: new Date(),
     };
 
     return await db.collection(CollName_Deal).insertOne(dealWithTimestamp);
@@ -125,7 +125,9 @@ function MyMongoDB() {
 
   myDB.getUserById = async (id) => {
     const db = await connect();
-    return await db.collection(CollName_User).findOne({ _id: new ObjectId(id) });
+    return await db
+      .collection(CollName_User)
+      .findOne({ _id: new ObjectId(id) });
   };
 
   myDB.getUserByUsername = async (username) => {
@@ -140,14 +142,19 @@ function MyMongoDB() {
 
   myDB.getDealsByUserId = async (userId) => {
     const db = await connect();
-    return await db.collection(CollName_Deal).find({ creatorId: userId }).toArray();
-}
+    return await db
+      .collection(CollName_Deal)
+      .find({ creatorId: userId })
+      .toArray();
+  };
 
   myDB.getLikedDealsByUserId = async (userId) => {
     const db = await connect();
-    return await db.collection(CollName_Deal).find({ likedUsers: userId }).toArray();
-  }
-  
+    return await db
+      .collection(CollName_Deal)
+      .find({ likedUsers: userId })
+      .toArray();
+  };
 
   myDB.closeConnection = async () => {
     if (client.isConnected()) {

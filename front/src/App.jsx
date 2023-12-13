@@ -8,17 +8,15 @@ import { AppFooter } from "./components/AppFooter.jsx";
 import { DisplayPage } from "./pages/DisplayPage";
 import { LoginPage } from "./pages/LoginPage";
 import { SignUpPage } from "./pages/SignUpPage";
-import { LoginLink } from './components/user/LoginLink.jsx';
-import { SignUpLink } from './components/user/SignUpLink.jsx';
-import { SearchBox } from './components/SearchBox';
-import { SearchPage } from './pages/SearchPage';
-import { UserCreatedPage } from './pages/UserCreatedPage';
-import { UserLikedPage } from './pages/UserLikedPage.jsx';
+import { LoginLink } from "./components/user/LoginLink.jsx";
+import { SignUpLink } from "./components/user/SignUpLink.jsx";
+import { SearchBox } from "./components/SearchBox";
+import { SearchPage } from "./pages/SearchPage";
+import { UserCreatedPage } from "./pages/UserCreatedPage";
+import { UserLikedPage } from "./pages/UserLikedPage.jsx";
 import "./asset/style/App.css";
 
 export default function App() {
-
-
   return (
     <div>
       <div className="container-fluid">
@@ -31,13 +29,13 @@ export default function App() {
           </div>
           <div className="col-md-6 text-center">
             <div className="user-functions">
-        <SearchBox />      
-        <Link to="/createdeal" className="post btn btn-primary">
-          Post Deal
-        </Link>
-        <SignUpLink />
-        <LoginLink />
-        </div>
+              <SearchBox />
+              <Link to="/createdeal" className="post btn btn-primary">
+                Post Deal
+              </Link>
+              <SignUpLink />
+              <LoginLink />
+            </div>
           </div>
         </div>
       </div>
@@ -75,5 +73,3 @@ export default function App() {
     </div>
   );
 }
-
-

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import React from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-export function PostCard ({ post }){
+export function PostCard({ post }) {
   return (
     <div className="container-fluid">
       <div className="post-card" key={post._id}>
@@ -33,16 +33,15 @@ export function PostCard ({ post }){
       </div>
     </div>
   );
-};
+}
 
 PostCard.propTypes = {
-    post: PropTypes.shape({
-      _id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      imagelink: PropTypes.string.isRequired,
-      like: PropTypes.number.isRequired,
-      category: PropTypes.string.isRequired,
-    }).isRequired
-  };
-
+  post: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    imagelink: PropTypes.string.isRequired,
+    like: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
+};

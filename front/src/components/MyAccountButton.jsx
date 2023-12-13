@@ -1,5 +1,5 @@
-import React, { useState , useEffect, useRef} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export function MyAccountButton() {
   const [showDropdown, setShowDropdown] = useState(false);
