@@ -32,7 +32,7 @@ export default function App() {
           <div className="col-md-6 text-center">
             <div className="user-functions">
         <SearchBox />      
-        <Link to="/createdeal" className="btn btn-primary">
+        <Link to="/createdeal" className="post btn btn-primary">
           Post Deal
         </Link>
         <SignUpLink />

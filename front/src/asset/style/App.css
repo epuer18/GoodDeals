@@ -25,7 +25,6 @@ h1 {
 /* Lead text styles */
 .lead {
   color: #425FAD; 
-  /* color: #7C945B; */
   font-weight: bolder;
   font-size: 28px;
   font-family: 'Quicksand';
@@ -65,12 +64,22 @@ footer {
   justify-content: space-between;
   margin: 25px 0px;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .user-functions .btn-primary {
   max-height: 44px;
   min-width: 105px;
+  background-color: #FF69B4;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
+
+.user-functions .btn-primary:hover{
+  background-color: #fe0883;
+} 
+
 
 .search-box{
   margin-top: 20px;
@@ -79,7 +88,7 @@ footer {
 }
 
 .search-box input,button{
-  color:#425FAD;
+  color:#333;
   padding: 10px;
   margin:auto;
 }
@@ -119,5 +128,14 @@ footer {
 }
 
 .login .btn-primary:hover{
+  background-color: #f99d2d;
+}
+
+.signup .btn-primary{
+  background-color: #FFB85F;
+  min-width: 80px;
+}
+
+.signup .btn-primary:hover{
   background-color: #f99d2d;
 }

@@ -60,7 +60,7 @@ export function HomePage() {
                   <p className="post-content">{post.description}</p>
 
                   <div className="post-meta">
-                    <p className="fa fa-heart likechecked"> Likes: {post.like}</p>
+                    <p className="fa fa-heart likechecked">{post.like}</p>
                     <p className="post-category"># {post.category}</p>
                   </div>
                   <Link

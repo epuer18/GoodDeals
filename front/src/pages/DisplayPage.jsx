@@ -60,18 +60,29 @@ export function DisplayPage({ category }) {
                 <div className="col-md-9 text-center">
                   <h3>{post.title}</h3>
                   <p className="post-content">{post.description}</p>
-                  <div className="post-meta">
-                  <p className="fa fa-heart likechecked">Likes: {post.like}</p>
-                  </div>
-                  <div>
 
+                  <div className="post-meta">
+                    <p className="fa fa-heart likechecked">{post.like}</p>
+                    <p className="post-category"># {post.category}</p>
+                  </div>
                   <Link
                     to={`/deals/id/${post._id}`}
                     className="btn btn-primary btn-lg"
                   >
                     Detail Page
                   </Link>
+
+                  {/* <div className="post-meta">
+                  <p className="fa fa-heart likechecked">{post.like}</p>
                   </div>
+                  <div>
+                  <Link
+                    to={`/deals/id/${post._id}`}
+                    className="btn btn-primary btn-lg"
+                  >
+                    Detail Page
+                  </Link>
+                  </div> */}
                 </div>
               </div>
             </div>

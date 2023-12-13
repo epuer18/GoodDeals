@@ -9,34 +9,34 @@ export function MyAccountButton() {
     setShowDropdown(!showDropdown);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowDropdown(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [dropdownRef]);
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  //       setShowDropdown(false);
+  //     }
+  //   };
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => document.removeEventListener("mousedown", handleClickOutside);
+  // }, [dropdownRef]);
 
-  useEffect(() => {
-    const handleEscapeKey = (event) => {
-      if (event.key === "Escape") {
-        setShowDropdown(false);
-      }
-    };
-    document.addEventListener("keydown", handleEscapeKey);
-    return () => document.removeEventListener("keydown", handleEscapeKey);
-  }, []);
+  // useEffect(() => {
+  //   const handleEscapeKey = (event) => {
+  //     if (event.key === "Escape") {
+  //       setShowDropdown(false);
+  //     }
+  //   };
+  //   document.addEventListener("keydown", handleEscapeKey);
+  //   return () => document.removeEventListener("keydown", handleEscapeKey);
+  // }, []);
 
   return (
     <div className="dropdown" ref={dropdownRef}>
       <button onClick={toggleDropdown} className="btn btn-primary">
-        Me
+        My Account
       </button>
       {showDropdown && (
         <div className="dropdown-content">
-          <Link to="/usercreated">Created Deals</Link>
+          <Link to="/usercreated">Posted Deals</Link>
           <Link to="/userliked">Liked Deals</Link>
         </div>
       )}
