@@ -93,7 +93,7 @@ User Liked Deal Page:
 `npm install`
 
 **4. Connect Database:** <br>
-Include a `.env` file in the project's root directory to set up the MONGODB_URI with your MongoDB connection string or have a MongoDB server running on `localhost:27017` to connect database.
+Include a `.env` file in the project's root directory to set up the `MONGODB_URI` with your MongoDB connection string or have a MongoDB server running on `localhost:27017` to connect database.
 
 **5. Import Data(Optional):** <br>
 `npm run initDB` to initializing the database with the 1000 deals data.
