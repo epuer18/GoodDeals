@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { UserContext } from '../components/userContext';
+import { UserContext } from '../components/user/userContext';
 import { Link } from 'react-router-dom';
 
 export function UserCreatedPage () {

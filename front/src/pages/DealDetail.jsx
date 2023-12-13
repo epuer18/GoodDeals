@@ -1,9 +1,9 @@
 import { useEffect, useState, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
-import { DeleteDeal } from "../pages/DeleteDeal";
-import { UserContext } from "../components/userContext";
-import { Comments } from "../pages/Comments";
-import { DealLikes}from './DealLikes';
+import { DeleteDeal } from "../components/deal/DeleteDeal";
+import { UserContext } from "../components/user/userContext";
+import { Comments } from "../components/deal/Comments";
+import { DealLikes}from '../components/deal/DealLikes';
 
 import "../asset/style/DealDetail.css";
 

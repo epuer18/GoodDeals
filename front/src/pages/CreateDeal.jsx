@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import "../asset/style/CreateDeal.css";
-import { UserContext } from "../components/userContext";
+import { UserContext } from "../components/user/userContext";
 
 export function CreateDeal() {
   const [dealData, setDealData] = useState({
