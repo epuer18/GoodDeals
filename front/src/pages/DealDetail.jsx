@@ -54,10 +54,15 @@ export function DealDetail() {
           <p className="card-creator">Posted at: {createdAt} </p>
           <hr className="solid"></hr>
           <div className="card-btn">
-          <DealLikes dealId={dealId} initialLikes={deal.like} likedUsers={   
+          <DealLikes
+  dealId={dealId}
+  initialLikes={deal.like}
+  likedUsers={user && deal.likedUsers ? deal.likedUsers.includes(user.id) : false}
+/>
+          {/* <DealLikes dealId={dealId} initialLikes={deal.like} likedUsers={   
             (user && deal.likedUsers)
           ? 
-          (deal.likedUsers.indexOf(user.id)+1): false}/>
+          (deal.likedUsers.indexOf(user.id)+1): false}/> */}
               {isCreator && (
                 <>
             <Link

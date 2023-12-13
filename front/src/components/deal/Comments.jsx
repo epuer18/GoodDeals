@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 export function Comments({ dealId, user }) {
   const [comments, setComments] = useState([]);
@@ -105,3 +106,10 @@ export function Comments({ dealId, user }) {
     </div>
   );
 }
+
+Comments.propTypes = {
+  dealId: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.string,
+  })
+};

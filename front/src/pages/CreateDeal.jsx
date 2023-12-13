@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../components/user/userContext";
+import { CreateDealForm } from '../components/deal/CreateDealForm';
 
 import "../asset/style/CreateDeal.css";
 
@@ -74,7 +75,12 @@ export function CreateDeal() {
         <div className="col-md-10">
           <h2>Post Deal</h2>
           <div className="create-deal-form">
-          <form onSubmit={handleSubmit}>
+          <CreateDealForm 
+            dealData={dealData} 
+            handleChange={handleChange} 
+            handleSubmit={handleSubmit} 
+          />
+          {/* <form onSubmit={handleSubmit}>
             <label htmlFor="title">Title</label>
             <div className="form-group mb-3">
               <input
@@ -141,7 +147,7 @@ export function CreateDeal() {
             <button type="submit" className="btn btn-primary">
               Submit Deal
             </button>
-          </form>
+          </form> */}
           </div>
         </div>
       </div>

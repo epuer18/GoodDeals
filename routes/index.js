@@ -16,12 +16,6 @@ router.post("/api/deals/deal", async (req, res) => {
   console.log("Deal data:", req.body);
   console.log("User data:", req.user);
 
-//   const newDeal = {
-//     ...req.body,
-//     creatorId: req.user.id
-// };
-
-
   try {
     const result = await myDB.createDeal(req.body);
     res.status(201).json({ success: true, dealId: result.insertedId });
@@ -110,7 +104,6 @@ router.put("/api/deals/id/:dealId/like", async function (req, res) {
           deal.like--; 
           deal.likedUsers.splice(userIndex, 1); 
         }
-        // await deal.save();
         const result = await myDB.updateDeal(deal._id, deal);
         console.log(deal)
         res.json({ like: deal.like, userLiked: userIndex === -1 });

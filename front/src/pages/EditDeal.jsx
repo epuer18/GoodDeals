@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { EditDealForm } from '../components/deal/EditDealForm';
 import "../asset/style/EditDeal.css";
 
 export function EditDeal() {
@@ -9,7 +10,7 @@ export function EditDeal() {
     weblink: "",
     imagelink: "",
     category: "",
-    like: 0,
+    // like: 0,
   });
   const { dealId } = useParams();
   const navigate = useNavigate();
@@ -74,7 +75,12 @@ export function EditDeal() {
         <div className="col-md-10">
           <h2>Edit Deal</h2>
           <div className="edit-form">
-          <form onSubmit={handleSubmit}>
+          <EditDealForm
+            dealData={dealData} 
+            handleChange={handleChange} 
+            handleSubmit={handleSubmit} 
+          />
+          {/* <form onSubmit={handleSubmit}>
             <label htmlFor="title">Title</label>
             <div className="form-group mb-3">
               <input
@@ -137,7 +143,8 @@ export function EditDeal() {
             <button type="submit" className="btn btn-primary">
               Update Deal
             </button>
-          </form>
+          </form> */}
+          
           </div>
         </div>
       </div>

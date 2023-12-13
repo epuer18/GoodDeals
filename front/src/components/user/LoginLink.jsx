@@ -17,3 +17,5 @@ export function LoginLink() {
         </div>
     );
 }
+
+LoginLink.propTypes = {};

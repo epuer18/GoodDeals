@@ -85,3 +85,5 @@ export function LoginPage(){
         </>
     );
 }
+
+LoginPage.propTypes = {};

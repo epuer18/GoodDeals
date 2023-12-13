@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Pagination } from "../components/Pagination";
 import { PostCard } from "../components/PostCard";
-
 import "../asset/style/DisplayPage.css";
 
 export function DisplayPage({ category }) {

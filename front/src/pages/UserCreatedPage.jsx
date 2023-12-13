@@ -2,8 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../components/user/userContext';
 import { Pagination } from "../components/Pagination";
 import { PostCard } from "../components/PostCard";
-
-import "../asset/style/UserCreatedPage.css";
+import "../asset/style/DisplayPage.css";
 
 export function UserCreatedPage () {
   const [userDeals, setUserDeals] = useState([]);
@@ -69,3 +68,5 @@ return (
     </div>
   );
 }
+
+UserCreatedPage.propTypes = {};

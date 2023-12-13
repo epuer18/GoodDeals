@@ -44,42 +44,12 @@ export function Pagination ({ postsPerPage, totalPosts, paginate, currentPage, j
     );
 };
 
-
-        {/* <div className="pagination">
-          <div className="prev">
-        {currentPage !== 1 && (
-          <button
-            onClick={() => paginate(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="prev"
-          >
-            Previous Page
-          </button>
-        )}
-        </div>
-        <div className="pagejump">
-        <p>1-{Math.ceil(posts.length / postsPerPage)} pages, now in {currentPage} page</p>
-            <input
-              type="number"
-              min="1"
-              max={Math.ceil(posts.length / postsPerPage)}
-              placeholder="1"
-              value={jumpToPageInput}
-              onChange={(e) => setJumpToPageInput(e.target.value)}
-            />
-            <button onClick={jumpToPage}>Jump</button>
-            
-          </div>
-        <div className="next">
-        {currentPage !== Math.ceil(posts.length / postsPerPage) && (
-          <button
-            onClick={() => paginate(currentPage + 1)}
-            disabled={currentPage === Math.ceil(posts.length / postsPerPage)}
-            className="next"
-          >
-            Next Page
-          </button>
-        )}
-        </div>
-
-        </div> */}
+Pagination.propTypes = {
+    postsPerPage: PropTypes.number.isRequired,
+    totalPosts: PropTypes.number.isRequired,
+    paginate: PropTypes.func.isRequired,
+    currentPage: PropTypes.number.isRequired,
+    jumpToPage: PropTypes.func.isRequired,
+    jumpToPageInput: PropTypes.string.isRequired,
+    setJumpToPageInput: PropTypes.func.isRequired
+}

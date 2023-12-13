@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { PostCard } from "../components/PostCard";
 import { Pagination } from "../components/Pagination";

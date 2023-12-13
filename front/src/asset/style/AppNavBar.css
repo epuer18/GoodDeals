@@ -3,10 +3,9 @@
 
 /* Style for the navigation bar */
 nav {
-  background-color: #ffbfca; /* Rose Gold background color */
-  color: black; /* White text color */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  /* position: fixed; */
+  background-color: #ffbfca; 
+  color: black; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
   width: 100%;
   margin:0px 10px;
   padding: 3px 10px;
@@ -20,7 +19,7 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-between; /* Space out the links evenly */
+  justify-content: space-between; 
   flex-wrap: wrap;
 }
 
@@ -38,7 +37,7 @@ nav a {
 
 /* Style the buttons on hover */
 nav a:hover {
-  color: #fff; /* Change text color to a deeper pink on hover */
+  color: #fff; 
   background-color: #fe0883;
 }
 
@@ -47,7 +46,7 @@ nav a:hover {
   display: flex;
 }
 .active-link {
-  color: #fff; /* Change text color to a deeper pink on hover */
+  color: #fff; 
   background-color: #fe0883;
 }
 
@@ -56,11 +55,11 @@ nav a:hover {
   border: solid 1px;
   border-radius: 4px;
   border-color: black;
-  background-color: #fff; /* White background for search input */
+  background-color: #fff; 
 }
 
 .search-button {
-  background-color: #FF69B4; /* Pink background color for the search button */
+  background-color: #FF69B4; 
   color: #000;
   border: none;
   border-radius: 4px;

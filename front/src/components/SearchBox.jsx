@@ -34,3 +34,5 @@ export function SearchBox () {
   );
 };
 
+SearchBox.propTypes = {};
+

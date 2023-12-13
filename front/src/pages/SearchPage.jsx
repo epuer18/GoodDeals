@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Pagination } from "../components/Pagination";
 import { PostCard } from "../components/PostCard";
-
-import "../asset/style/SearchPage.css";
+import "../asset/style/DisplayPage.css";
 
 export function SearchPage (){
   const [posts, setPosts] = useState([]);
@@ -56,8 +55,6 @@ export function SearchPage (){
       }
     };
 
-
-
   return (
         <div>
           <div className="display-page">
@@ -67,7 +64,7 @@ export function SearchPage (){
                 <PostCard key={index} post={post} />
             ))
             ) : (
-                <h3 className="searchresult">No results found.</h3>
+                <h3>No results found.</h3>
             )}
 
             {filteredPosts.length > 0 && (
@@ -85,3 +82,5 @@ export function SearchPage (){
         </div>
       );
     }
+
+SearchPage.propTypes = {};

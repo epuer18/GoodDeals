@@ -4,7 +4,6 @@
 .display-page {
   font-family: 'Quicksand';
   background-size: cover;
-  /* background-color: #ffe4e1; Rose gold background color */
   padding: 10px;
 }
 
@@ -21,9 +20,15 @@
   font-size: 36px;
 }
 
+.display-page h3 {
+  font-size: larger;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* Post card */
 .post-card {
-  /* background-color: #fddbe0; */
   background-color: #fde5e8;
   border-radius: 8px;
   padding: 10px;

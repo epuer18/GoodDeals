@@ -1,5 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../user/userContext";
+import PropTypes from 'prop-types';
 
 export const DealLikes = ({ dealId, initialLikes, likedUsers }) => {
     const { user } = useContext(UserContext); 
@@ -37,7 +38,6 @@ export const DealLikes = ({ dealId, initialLikes, likedUsers }) => {
     };
 
     const handleKeyPress = (event) => {
-      // Check if the Enter key is pressed
       if (event.key === "Enter") {
         handleLike();
       }
@@ -45,14 +45,20 @@ export const DealLikes = ({ dealId, initialLikes, likedUsers }) => {
   
     return (
       <span
-      tabIndex="0" // Make the element focusable
+      tabIndex="0" 
       onClick={handleLike}
-      onKeyPress={handleKeyPress} // Handle key press for accessibility
+      onKeyPress={handleKeyPress} 
       className="star-section"
-      role="button" // Indicate that the element is interactive
+      role="button" 
     >
         {liked ? <span className="fa fa-heart checked"></span> : <span className="fa fa-heart-o unchecked"></span>}
         {likes}
       </span>
     );
+  };
+
+  DealLikes.propTypes = {
+    dealId: PropTypes.string.isRequired,
+    initialLikes: PropTypes.number.isRequired,
+    likedUsers: PropTypes.bool.isRequired
   };
