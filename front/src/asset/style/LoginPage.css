@@ -1,0 +1,42 @@
+.form-signin {
+    padding: 20px;
+    background-color: rgb(248, 243, 246);
+    border-radius: 5px;
+    font-family: 'Quicksand';
+    }
+
+.form-signin .form-group {
+    margin-bottom: 15px; 
+    }
+
+.form-signin .form-control {
+    display: block; 
+    width: 100%; 
+    margin-left: auto; 
+    margin-right: auto;
+    border: #FFB85F solid 1px;
+    }
+
+.form-signin button {
+    width: 180px; 
+    max-width: 300px;
+    padding: 10px;
+    margin: 15px auto; 
+    
+    }
+
+.form-signin button:hover {
+    color: white;
+    background-color: #fe0883;
+
+    
+}
+
+.signup .btn-secondary{
+    width: 180px; 
+    max-width: 300px;
+    padding: 10px;
+    margin: auto; 
+}
+
+

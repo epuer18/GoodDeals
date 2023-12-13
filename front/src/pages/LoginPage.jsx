@@ -2,6 +2,7 @@ import React, { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../components/userContext";
+import "../asset/style/LoginPage.css";
 
 export function LoginPage(){
 
@@ -35,15 +36,19 @@ export function LoginPage(){
 
     return (
         <>
-            <div className="form-signin w-100 m-auto">
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-10">
+            <h2>Please Sign In</h2>
+            <div className="form-signin">
                 <form ref={loginFormRef} onSubmit={onSignIn}>
-                    <h1 className="h3 mb-3 fw-normal">Please Sign In</h1>
+                    
                     <label htmlFor="email">Email</label>
                     <div className="form-group mb-3">
                         <input
                             type="email"
                             name="email"
-                            placeholder="email"
+                            placeholder="Email"
                             className="form-control"
                             id="floatingInput"
                             required
@@ -54,7 +59,7 @@ export function LoginPage(){
                         <input
                             type="password"
                             name="password"
-                            placeholder="password"
+                            placeholder="Password"
                             className="form-control"
                             id="floatingPassword"
                             required
@@ -67,12 +72,15 @@ export function LoginPage(){
                     </div>
                     {message && <div className="alert alert-info">{message}</div>}
                 </form>
-                <div>
+                <div className="signup">
                 <p>Don't have an account?</p>
                     <Link to="/signup" className="btn btn-secondary w-30 py-2">
                         Sign Up
                     </Link>
                 </div>
+                </div>
+            </div>
+            </div>
             </div>
         </>
     );

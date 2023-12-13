@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../asset/style/SignUpPage.css";
 
 export function SignUpPage(){
     const [formData, setFormData] = useState({
@@ -47,9 +48,12 @@ export function SignUpPage(){
 
     return (
         <>
-      <div className="form-signin w-100 m-auto">
-            <form onSubmit={handleSubmit}>
-                <h1 className="h3 mb-3 fw-normal">Please Sign Up</h1>
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-10">
+                <h2>Please Sign Up</h2>
+                <div className="form-signup">
+                <form onSubmit={handleSubmit}>
                 <label htmlFor="email">Email</label>
                 <div className="form-group mb-3">
                     <input
@@ -100,7 +104,10 @@ export function SignUpPage(){
                 </div>
                 <button className="btn btn-secondary w-30 py-2" type="submit">Sign Up</button>
             </form> 
-            </div>         
+            </div>
+            </div>
+            </div>
+            </div>       
        </> 
 )};
 
