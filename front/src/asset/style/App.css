@@ -22,6 +22,12 @@ h1 {
   font-size: 48px;
 }
 
+.page-heading-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 /* Lead text styles */
 .lead {
   color: #425fad;
