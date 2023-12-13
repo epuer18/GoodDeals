@@ -1,25 +1,35 @@
 # GoodDeals
 
-## Project Objective
+## This branch is for Project 4 - GoodDeals2.0
 
-This branch is for project 4
+## Project Objective 
 GoodDeals is an online platform designed for shoppers to discover, share, and discuss the best deals available across various categories. Users can post their found deals, comment on others, and rank them. With a focus on community interaction and ease of use, GoodDeals not only promotes savings but also facilitates a space for shoppers to interact and help each other find the best discounts around.
 
 Link to GoodDeals Web Application: (https://gooddeals.onrender.com)
 
 ## Design Document
 
-View Design Document: [Design Document](https://docs.google.com/document/d/1L9pRUgOllCcjh4FPXOf4n7vzCFfgaMXvKw62Ob7jRd0/edit?usp=sharing)
+View Design Document: [Design Document](https://docs.google.com/document/d/1mLVD_t3ZOlR1Mv14g0WTbd8LCAE7koWyHlq9HfljEnw/edit?usp=sharing)
 
 ## Features
 
+**Without User Account:**
+- **View Deal:** Users and view deals based on different categories
+- **Search Deal:** Users can search deals by title and description. 
+
+**With User Account:**
+- **User Management:** Users can register for a new account, login and logout.
 - **Post Deal:** Users can share new deals by posting links and relevant information
 - **Edit Deal:** Users can modify their previously posted deals to update details
-- **Delete Deal:** Allows users to remove their deals
-- **View Deal:** Users and view deals based on different categories
-- **Comment:** Users can comment on posted deals
+- **Delete Deal:** Users can remove their deals
+
+- **Post Comment:** Users can comment on posted deals
 - **Delete Comment:** Users have the option to remove their comments
-- **Like:** Users can show appreciation for a deal or a comment by liking it
+- **Like:** Users can show appreciation for a deal by liking it
+- **Cancel Like:** Users have the option to cancel their likes.
+- **View Posted Deal:** Users can view their posted deals in the Posted Deals section.
+- **View Liked Deal:** Users can view their liked deals in the Liked Deals section.
+
 - **Deals Ranking:** A dynamic ranking system that ranks deals based on user likes
 - **Deals Display:** Deals are organized and displayed on their respective category pages
 
@@ -76,7 +86,7 @@ Deal Detail Page:
 `npm install`
 
 **4. Connect Database:** <br>
-Configured in the `MONGODB_URI` environment variable or have a MongoDB server running on `localhost:27017` to connect database.
+Include a `.env` file in the project's root directory to set up the MONGODB_URI with your MongoDB connection string or have a MongoDB server running on `localhost:27017` to connect database.
 
 **5. Import Data(Optional):** <br>
 `npm run initDB` to initializing the database with the 1000 deals data.
@@ -109,7 +119,7 @@ This project was created as a part of the Web Development class in Computer Scie
 
 ## Link to the Google slides
 
-View the presentation of the project in this [google slides](https://docs.google.com/presentation/d/1Co03Snc30ntdBwIYP4DPWdYoVIXBXR4g2RQfKjlzYpU/edit?usp=sharing)
+View the presentation of the project in this [google slides](https://docs.google.com/presentation/d/1d3CExxyvhup0wrN0gQUahr-rCzsG22PvFK96ZnnTiEo/edit?usp=sharing)
 
 ## Link to the Video Demonstration
 
@@ -117,4 +127,4 @@ Watch a detailed walkthrough of the project in this [video demonstration](https:
 
 ## License
 
-License: This project is licensed under the MIT License - see the [LICENSE](https://github.com/Yushicui/GoodDeals/blob/main/LICENSE) for details.
+License: This project is licensed under the MIT License - see the [LICENSE](https://github.com/Yushicui/GoodDeals/blob/GoodDeals2.0-FinalProject/LICENSE) for details.
