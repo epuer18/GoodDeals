@@ -39,20 +39,20 @@ View Design Document: [Design Document](https://docs.google.com/document/d/1mLVD
 ## Screenshot
 
 Home Page:
-![Home page screenshot1](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/HomePage01.jpg)
-![Home page screenshot2](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/HomePage02.jpg)
+![Home page screenshot1](https://github.com/Yushicui/GoodDeals/blob/GoodDeals2.0-FinalProject/screenshot/HomePage01.jpg)
+![Home page screenshot2](https://github.com/Yushicui/GoodDeals/blob/GoodDeals2.0-FinalProject/screenshot/HomePage02.jpg)
 
 SignIn Page:
-![SignIn page screenshot](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/SigninPage.jpg)
+![SignIn page screenshot](https://github.com/Yushicui/GoodDeals/blob/GoodDeals2.0-FinalProject/screenshot/SigninPage.jpg)
 
 Post Deal Page:
-![Create Deal page screenshot](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/PostDealPage.jpg)
+![Create Deal page screenshot](https://github.com/Yushicui/GoodDeals/blob/GoodDeals2.0-FinalProject/screenshot/PostDealPage.jpg)
 
 Deal Detail Page:
-![Deal Detail screenshot](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/SigninPage.jpg)
+![Deal Detail screenshot](https://github.com/Yushicui/GoodDeals/blob/GoodDeals2.0-FinalProject/screenshot/DealDetailPage.jpg)
 
 User Liked Deal Page:
-![Deal Detail screenshot](https://github.com/Yushicui/GoodDeals/blob/main/GoodDeals2.0-FinalProject/screenshot/MyLikedDealPage.jpg)
+![Deal Detail screenshot](https://github.com/Yushicui/GoodDeals/blob/GoodDeals2.0-FinalProject/screenshot/MyLikedDealPage.jpg)
 
 ## Tech Stack
 
