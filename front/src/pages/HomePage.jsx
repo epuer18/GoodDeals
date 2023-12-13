@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { PostCard } from "../components/PostCard";
+import { Pagination } from "../components/Pagination";
 import "../asset/style/DisplayPage.css";
 
 export function HomePage() {
@@ -45,74 +47,19 @@ export function HomePage() {
       <div className="display-page">
         <h2>Deals</h2>
         {currentPosts.map((post, index) => (
-          <div className="container-fluid" key={index}>
-            <div className="post-card" key={post._id}>
-              <div className="row justify-content-center">
-                <div className="col-md-3">
-                  <img
-                    src={post.imagelink}
-                    alt={post.title}
-                    className="post-card-img"
-                  />
-                </div>
-                <div className="col-md-9 text-center">
-                  <h3>{post.title}</h3>
-                  <p className="post-content">{post.description}</p>
-
-                  <div className="post-meta">
-                    <p className="fa fa-heart likechecked">{post.like}</p>
-                    <p className="post-category"># {post.category}</p>
-                  </div>
-                  <Link
-                    to={`/deals/id/${post._id}`}
-                    className="btn btn-primary btn-lg"
-                  >
-                    Detail Page
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+          <PostCard key={index} post={post} />
         ))}
 
-        <div className="pagination">
-          <div className="prev">
-        {currentPage !== 1 && (
-          <button
-            onClick={() => paginate(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="prev"
-          >
-            Previous Page
-          </button>
-        )}
-        </div>
-        <div className="pagejump">
-        <p>1-{Math.ceil(posts.length / postsPerPage)} pages, now in {currentPage} page</p>
-            <input
-              type="number"
-              min="1"
-              max={Math.ceil(posts.length / postsPerPage)}
-              placeholder="1"
-              value={jumpToPageInput}
-              onChange={(e) => setJumpToPageInput(e.target.value)}
+<Pagination
+                postsPerPage={postsPerPage}
+                totalPosts={posts.length}
+                paginate={paginate}
+                currentPage={currentPage}
+                jumpToPage={jumpToPage}
+                jumpToPageInput={jumpToPageInput}
+                setJumpToPageInput={setJumpToPageInput}
             />
-            <button onClick={jumpToPage}>Jump</button>
-            
-          </div>
-        <div className="next">
-        {currentPage !== Math.ceil(posts.length / postsPerPage) && (
-          <button
-            onClick={() => paginate(currentPage + 1)}
-            disabled={currentPage === Math.ceil(posts.length / postsPerPage)}
-            className="next"
-          >
-            Next Page
-          </button>
-        )}
-        </div>
 
-        </div>
       </div>
     </div>
   );

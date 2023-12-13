@@ -1,10 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../components/user/userContext';
-import { Link } from 'react-router-dom';
+import { Pagination } from "../components/Pagination";
+import { PostCard } from "../components/PostCard";
+
+import "../asset/style/UserLikedPage.css";
 
 export function UserLikedPage () {
   const [likedDeals, setLikedDeals] = useState([]);
   const { user } = useContext(UserContext);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(10);
+  const [jumpToPageInput, setJumpToPageInput] = useState("");
 
   useEffect(() => {
     const fetchLikedDeals = async () => {
@@ -24,60 +30,42 @@ export function UserLikedPage () {
     fetchLikedDeals();
   }, [user]);
 
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = likedDeals.slice(indexOfFirstPost, indexOfLastPost);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const jumpToPage = () => {
+    const pageNumber = parseInt(jumpToPageInput, 10);
+    if (pageNumber >= 1 && pageNumber <= Math.ceil(likedDeals.length / postsPerPage)) {
+      setCurrentPage(pageNumber);
+    }
+  };
+
+
 return (
   <div>
     <div className="display-page">
       <h2>My Liked Deals:</h2>
-      {likedDeals.length > 0 ?
-      (likedDeals.map((post, index) => (
-        <div className="container-fluid" key={index}>
-          <div className="post-card" key={post._id}>
-            <div className="row justify-content-center">
-              <div className="col-md-3">
-                <img
-                  src={post.imagelink}
-                  alt={post.title}
-                  className="post-card-img"
-                />
-              </div>
-              <div className="col-md-9 text-center">
-                <h3>{post.title}</h3>
-                <p className="post-content">{post.description}</p>
-                <p className="fa fa-heart likechecked"> Likes: {post.like}</p>
-                <div className="post-meta">
-                  <p className="post-category">Category: {post.category}</p>
-                </div>
-                <Link
-                  to={`/deals/id/${post._id}`}
-                  className="btn btn-primary btn-lg"
-                >
-                  Detail Page
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      ))
+      {currentPosts.length > 0 ? (
+          currentPosts.map((post, index) => (
+            <PostCard key={index} post={post} />
+          ))
       ) : (
           <h3>You have not liked any deals yet.</h3>
       )}
 
-      {/* <div className="pagination">
-        <button
-          onClick={() => paginate(currentPage - 1)}
-          disabled={currentPage === 1}
-          className="prev"
-        >
-          Previous Page
-        </button>
-        <button
-          onClick={() => paginate(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          className="next"
-        >
-          Next Page
-        </button>
-      </div> */}
+     {likedDeals.length > 0 && (
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={likedDeals.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          jumpToPage={jumpToPage}
+          jumpToPageInput={jumpToPageInput}
+          setJumpToPageInput={setJumpToPageInput}
+        />
+      )}
+
     </div>
   </div>
 );
