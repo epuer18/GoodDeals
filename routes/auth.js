@@ -6,7 +6,6 @@ import myDB from "../db/myMongoDB.js";
 const router = express.Router();
 
 router.post("/api/login/password", async (req, res, next) => {
-    console.log(req.body);
     const userEmail = req.body.email;
     let userinfo;
     try {

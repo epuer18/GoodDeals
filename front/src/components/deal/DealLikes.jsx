@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { UserContext } from "../user/userContext";
 import PropTypes from 'prop-types';
 
@@ -17,7 +17,6 @@ export const DealLikes = ({ dealId, initialLikes, likedUsers }) => {
       const newLikes = liked ? likes - 1 : likes + 1;
 
       try {
-        console.log("in likes", { userId: user.id, like: newLikes })
         const response = await fetch(`/api/deals/id/${dealId}/like`, {
           method: "PUT",
           headers: {
@@ -60,5 +59,5 @@ export const DealLikes = ({ dealId, initialLikes, likedUsers }) => {
   DealLikes.propTypes = {
     dealId: PropTypes.string.isRequired,
     initialLikes: PropTypes.number.isRequired,
-    likedUsers: PropTypes.bool.isRequired
+    likedUsers: PropTypes.number.isRequired,
   };

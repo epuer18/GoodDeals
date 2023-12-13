@@ -10,7 +10,6 @@ export function EditDeal() {
     weblink: "",
     imagelink: "",
     category: "",
-    // like: 0,
   });
   const { dealId } = useParams();
   const navigate = useNavigate();

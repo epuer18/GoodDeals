@@ -1,15 +1,13 @@
-/* Add styles for the DetailPage component */
 
 /* Container styles */
 .container-fluid {
-  background-color: rgb(248, 243, 246); /* Rose gold background color */
+  background-color: rgb(248, 243, 246); 
   padding: 0px;
   margin-top: 0%;
 }
 
 /* Card styles */
 .card {
-  /* background-color: #fddbe0;  */
   background-color: #fde5e8;
   border-radius: 8px;
   padding: 30px;
@@ -28,7 +26,7 @@
 
 /* Title styles */
 .card-title {
-  color: #fe0883; /* Rose gold heading color */
+  color: #fe0883; 
   font-size: 32px;
   margin-bottom: 10px;
   font-family: "Quicksand";
@@ -60,8 +58,6 @@
 }
 
 .star-section {
-  /* font-size: 20px; */
-  /* border: #757575 solid 1px; */
   padding: 11px 20px;
   margin-right: 10px;
   border-radius: 4px;
@@ -89,8 +85,8 @@
 
 /* Edit button styles */
 .btn-secondary {
-  background-color: #FF69B4; /* Rose gold button background color */
-  color: black; /* White button text color */
+  background-color: #FF69B4; 
+  color: black;
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
@@ -98,13 +94,13 @@
 }
 
 .btn-secondary:hover {
-  background-color: #fe0883; /* Lighter rose gold on hover */
+  background-color: #fe0883; 
 }
 
 /* Like button styles */
 .card-body button {
-  background-color: #AD6690; /* Rose gold button background color */
-  color: black; /* White button text color */
+  background-color: #AD6690; 
+  color: black;
   border: none;
   border-radius: 4px;
   padding: 10px 10px;
@@ -112,25 +108,25 @@
 }
 
 .card-body button:hover {
-  background-color: #8f5577; /* Lighter rose gold on hover */
+  background-color: #8f5577;
 }
 
 /* Add comment button styles */
 .btn-primary {
-  background-color: #FF69B4; /* Rose gold button background color */
-  color: black; /* White button text color */
+  background-color: #FF69B4;
+  color: black;
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
 }
 
 .btn-primary:hover {
-  background-color: #FF69B4; /* Lighter rose gold on hover */
+  background-color: #FF69B4; 
 }
 
 /* Comments styles */
 h3 {
-  color: #fe0883; /* Rose gold heading color */
+  color: #fe0883;
   font-size: 24px;
   margin-top: 20px;
 }
@@ -179,7 +175,7 @@ form {
 }
 
 .comment-section button {
-  margin: 10px 0px 0px 0px; /* Add some spacing between textarea and button */
+  margin: 10px 0px 0px 0px; 
   padding: 10px 2cqi;
   background-color: #AD6690; 
   color: black; 
@@ -195,10 +191,10 @@ form {
 
 /* CSS for the submit button */
 .comment-form button {
-  margin: 10px 0px 0px 0px; /* Add some spacing between textarea and button */
-  padding: 10px 2cqi; /* Adjust padding as needed */
-  background-color: #FF69B4; /* Change the button background color */
-  color: black; /* Set text color to white */
+  margin: 10px 0px 0px 0px; 
+  padding: 10px 2cqi; 
+  background-color: #FF69B4; 
+  color: black; 
   display: flex;
   justify-content: right;
   text-align: right;
@@ -208,10 +204,10 @@ form {
 /* Style the button on hover */
 .comment-form button:hover {
   color:white;
-  background-color: #fe0883; /* Change the background color on hover */
+  background-color: #fe0883;
 }
 @media (max-width: 768px) {
   .comment-form textarea {
-    height: 80px; /* Adjust the height for smaller screens */
+    height: 80px;
   }
 }

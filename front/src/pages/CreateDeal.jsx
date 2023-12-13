@@ -27,7 +27,6 @@ export function CreateDeal() {
       alert("You need to be logged in to create a deal.");
       navigate("/login");
     } else {
-      console.log("in useeEffect user", user)
       setDealData((prevData) => ({ ...prevData, creatorId: user.id, creatorName: user.username }));
     }
   }, [user, navigate]);
@@ -35,8 +34,6 @@ export function CreateDeal() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    console.log("in submit", dealData);
 
     const response = await fetch("/api/deals/deal", {
       method: "POST",

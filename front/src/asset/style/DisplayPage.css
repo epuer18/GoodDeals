@@ -1,4 +1,4 @@
-/* Add styles for the DisplayPage component */
+/* styles for the DisplayPage component */
 
 /* Page container */
 .display-page {
@@ -52,27 +52,26 @@
 
 .post-card h3 {
   font-size: 28px;
-  color: #fe0883; /* Rose gold heading color */
+  color: #fe0883; 
   margin: 5px 0px 0px 0px;
   font-weight: bold;
   font-family: 'Quicksand';
 }
 
 .post-card p {
-  color: #C70107; /* Gold text color */
+  color: #C70107; 
   margin: 0% 3%;
   text-align: left;
   font-size: 17px;
-    /* font-family: Helvetica, Arial, sans-serif; */
 }
 
 .post-card .post-content {
-  color: #101010; /* Dark text color */
+  color: #101010; 
   margin-top: 0%;
 }
 
 .post-card .post-meta {
-  color: #101010; /* Dark text color */
+  color: #101010; 
   margin-top: 10px;
 }
 
@@ -92,7 +91,7 @@
 .post-meta p {
   margin: 0px 20px;
 }
-/* Pagination buttons */
+
 .pagination {
   display: flex;
   justify-content: space-between;
@@ -126,8 +125,8 @@
 }
 
 .pagination button {
-  background-color: #FFB85F; /* Rose gold button background color */
-  color: black; /* White button text color */
+  background-color: #FFB85F; 
+  color: black;
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
@@ -138,5 +137,5 @@
 
 .pagination button:hover {
   color: white;
-  background-color: #f99d2d; /* Lighter rose gold on hover */
+  background-color: #f99d2d; 
 }

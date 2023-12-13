@@ -11,7 +11,6 @@ export function Comments({ dealId, user }) {
         if (response.ok) {
           const data = await response.json();
           setComments(data);
-          console.log("in comment component", comments)
         }
       }
       fetchComments();
