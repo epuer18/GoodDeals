@@ -1,6 +1,4 @@
-# GoodDeals
-
-## This branch is for Project 4 - GoodDeals2.0
+# GoodDeals2.0 - This branch is for Project 4 
 
 ## Project Objective
 
