@@ -124,6 +124,7 @@
 
 
 .comment-section button:hover {
+  color:white;
   background-color: #8f5577;
 }
 
@@ -208,6 +209,7 @@ form {
 
 /* Style the button on hover */
 .comment-form button:hover {
+  color:white;
   background-color: #ff1493; /* Change the background color on hover */
 }
 @media (max-width: 768px) {

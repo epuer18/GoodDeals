@@ -6,13 +6,22 @@
   font-family: 'Quicksand';
 }
 
-.create-deal-form input,
-.create-deal-form textarea,
-.create-deal-form select {
-  margin-bottom: 15px;
+.create-deal-form .form-group {
+  margin-bottom: 15px; 
+}
+
+.create-deal-form .form-control {
+  display: block; 
+  width: 100%; 
+  margin-left: auto; 
+  margin-right: auto; 
+  border: #FFB85F solid 1px;
 }
 
 .create-deal-form button {
-  width: 100%;
+  width: 180px; 
+  max-width: 300px;
   padding: 10px;
+  margin: 15px auto; 
+  /* display: block;  */
 }

@@ -1,5 +1,5 @@
 h2 {
-    color: #FF69B4; 
+    color: #fe0883; 
     font-family: 'Pacifico';
     text-align: left;
     margin-left: 0px;
@@ -8,24 +8,33 @@ h2 {
 
 .edit-form {
     padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: rgb(248, 243, 246);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-family: 'Quicksand';
-    /* background-color: #fddbe0; */
-  }
+    }
+
+.edit-form .form-group {
+    margin-bottom: 15px; 
+    }
+
+.edit-form .form-control {
+    display: block; 
+    width: 100%; 
+    margin-left: auto; 
+    margin-right: auto;
+    border: #FFB85F solid 1px;
+    }
+
+.edit-form button {
+    width: 180px; 
+    max-width: 300px;
+    padding: 10px;
+    margin: 15px auto; 
+    /* display: block;  */
+    }
 
 label {
     font-size: 24px;
     color: #757575;
-}
-  
-
-.form-control{
-    font-size: 18px;
-    background-color: #fff;
-    border: #FFB85F solid 1px;
-}
-
-.form-group {
-    margin-bottom: 20px;
 }

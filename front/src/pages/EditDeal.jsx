@@ -69,9 +69,9 @@ export function EditDeal() {
   };
 
   return (
-    <div className="container-fluid mt-4">
+    <div className="container mt-5">
       <div className="row justify-content-center">
-        <div className="col-md-6">
+        <div className="col-md-10">
           <h2>Edit Deal</h2>
           <div className="edit-form">
           <form onSubmit={handleSubmit}>
