@@ -52,7 +52,7 @@ Deal Detail Page:
 ![Deal Detail screenshot](https://github.com/Yushicui/GoodDeals/blob/GoodDeals2.0-FinalProject/screenshot/DealDetailPage.jpg)
 
 User Liked Deal Page:
-![Deal Detail screenshot](https://github.com/Yushicui/GoodDeals/blob/GoodDeals2.0-FinalProject/screenshot/MyLikedDealPage.jpg)
+![Deal Detail screenshot](https://github.com/Yushicui/GoodDeals/blob/GoodDeals2.0-FinalProject/screenshot/MyLikedDealPage2.jpg)
 
 ## Tech Stack
 
