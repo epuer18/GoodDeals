@@ -71,18 +71,6 @@ export function DisplayPage({ category }) {
                   >
                     Detail Page
                   </Link>
-
-                  {/* <div className="post-meta">
-                  <p className="fa fa-heart likechecked">{post.like}</p>
-                  </div>
-                  <div>
-                  <Link
-                    to={`/deals/id/${post._id}`}
-                    className="btn btn-primary btn-lg"
-                  >
-                    Detail Page
-                  </Link>
-                  </div> */}
                 </div>
               </div>
             </div>
