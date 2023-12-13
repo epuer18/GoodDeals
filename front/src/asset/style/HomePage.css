@@ -8,7 +8,7 @@
 
 /* Heading styles */
 h1 {
-  color: #FF69B4; /* Rose gold heading color */
+  color: #fe0883; /* Rose gold heading color */
 }
 
 
@@ -24,7 +24,7 @@ h1 {
 }
 
 .btn-primary:hover {
-  background-color: #ff69b4; /* Lighter rose gold on hover */
+  background-color: #fe0883; /* Lighter rose gold on hover */
 }
 
 /* DisplayPage styles */

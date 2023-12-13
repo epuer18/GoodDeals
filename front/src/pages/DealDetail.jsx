@@ -29,8 +29,17 @@ export function DealDetail() {
     return <div>Loading...</div>;
   }
 
-  const createdAt = new Date(deal.createdAt).toLocaleString();
-  
+  const options = {
+    year: 'numeric', 
+    month: 'numeric', 
+    day: 'numeric', 
+    hour: 'numeric', 
+    minute: '2-digit', 
+    hour12: true
+  };
+
+  const createdAt = new Date(deal.createdAt).toLocaleString('en-US', options);
+
   const isCreator = user && user.id === deal.creatorId;
 
   return (

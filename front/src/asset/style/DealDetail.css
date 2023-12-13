@@ -89,7 +89,7 @@
 
 /* Edit button styles */
 .btn-secondary {
-  background-color: #ff69b4; /* Rose gold button background color */
+  background-color: #FF69B4; /* Rose gold button background color */
   color: black; /* White button text color */
   border: none;
   border-radius: 4px;
@@ -98,7 +98,7 @@
 }
 
 .btn-secondary:hover {
-  background-color: #ff1493; /* Lighter rose gold on hover */
+  background-color: #fe0883; /* Lighter rose gold on hover */
 }
 
 /* Like button styles */
@@ -115,23 +115,9 @@
   background-color: #8f5577; /* Lighter rose gold on hover */
 }
 
-.comment-section {
-  width: 100%;
-  margin-top: 0px;
-  padding: 0px;
-  font-size: larger;
-}
-
-
-.comment-section button:hover {
-  color:white;
-  background-color: #8f5577;
-}
-
-
 /* Add comment button styles */
 .btn-primary {
-  background-color: #ff69b4; /* Rose gold button background color */
+  background-color: #FF69B4; /* Rose gold button background color */
   color: black; /* White button text color */
   border: none;
   border-radius: 4px;
@@ -139,7 +125,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #ff69b4; /* Lighter rose gold on hover */
+  background-color: #FF69B4; /* Lighter rose gold on hover */
 }
 
 /* Comments styles */
@@ -185,14 +171,26 @@ form {
   justify-content: space-between;
 }
 
+.comment-section {
+  width: 100%;
+  margin-top: 0px;
+  padding: 0px;
+  font-size: larger;
+}
+
 .comment-section button {
-  padding: 10px 20px; /* Adjust padding as needed */
-  margin: 0px;
-  background-color: #AD6690; /* Change the button background color */
-  color: black; /* Set text color to white */
-  display: flex;
-  justify-content: right;
-  font-size: medium;
+  margin: 10px 0px 0px 0px; /* Add some spacing between textarea and button */
+  padding: 10px 2cqi;
+  background-color: #AD6690; 
+  color: black; 
+  display: block;
+  text-align: right;
+  font-size: medium; 
+}
+
+.comment-section button:hover {
+  color:white;
+  background-color: #8f5577;
 }
 
 /* CSS for the submit button */
@@ -210,7 +208,7 @@ form {
 /* Style the button on hover */
 .comment-form button:hover {
   color:white;
-  background-color: #ff1493; /* Change the background color on hover */
+  background-color: #fe0883; /* Change the background color on hover */
 }
 @media (max-width: 768px) {
   .comment-form textarea {
